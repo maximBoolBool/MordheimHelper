@@ -1,0 +1,12 @@
+C:\Users\petra\RiderProjects\MordheimHelper\SharedEntities\bin\Debug\net7.0\SharedEntities.deps.json
+C:\Users\petra\RiderProjects\MordheimHelper\SharedEntities\bin\Debug\net7.0\SharedEntities.dll
+C:\Users\petra\RiderProjects\MordheimHelper\SharedEntities\bin\Debug\net7.0\SharedEntities.pdb
+C:\Users\petra\RiderProjects\MordheimHelper\SharedEntities\obj\Debug\net7.0\SharedEntities.csproj.AssemblyReference.cache
+C:\Users\petra\RiderProjects\MordheimHelper\SharedEntities\obj\Debug\net7.0\SharedEntities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\petra\RiderProjects\MordheimHelper\SharedEntities\obj\Debug\net7.0\SharedEntities.AssemblyInfoInputs.cache
+C:\Users\petra\RiderProjects\MordheimHelper\SharedEntities\obj\Debug\net7.0\SharedEntities.AssemblyInfo.cs
+C:\Users\petra\RiderProjects\MordheimHelper\SharedEntities\obj\Debug\net7.0\SharedEntities.csproj.CoreCompileInputs.cache
+C:\Users\petra\RiderProjects\MordheimHelper\SharedEntities\obj\Debug\net7.0\SharedEntities.dll
+C:\Users\petra\RiderProjects\MordheimHelper\SharedEntities\obj\Debug\net7.0\refint\SharedEntities.dll
+C:\Users\petra\RiderProjects\MordheimHelper\SharedEntities\obj\Debug\net7.0\SharedEntities.pdb
+C:\Users\petra\RiderProjects\MordheimHelper\SharedEntities\obj\Debug\net7.0\ref\SharedEntities.dll
