@@ -1,9 +1,12 @@
-﻿using MongoDB.Driver;
+﻿
+using Microsoft.EntityFrameworkCore;
+using RuleEntities.Entities;
+using UserEntities.Repositories;
 
 namespace RuleEntities.Repositories.Impl;
 
 /// <inheritdoc cref="IRangeWeaponRepository"/>
-public class RangeWeaponRepository : MongoDbRepository<RangeWeaponRepository>, IRangeWeaponRepository
+public class RangeWeaponRepository : BaseRepositiry<RangeWeaponEntity>, IRangeWeaponRepository
 {
-    public RangeWeaponRepository(IMongoDatabase db) : base(db) { }
+    public RangeWeaponRepository(DbContext db) : base(db) { }
 }

@@ -1,71 +1,109 @@
-﻿using MongoDB.Bson;
-using Newtonsoft.Json;
-using SharedEntities;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using SharedEntities.Entities;
 
 namespace RuleEntities.Entities;
 
 /// <summary>
-///     Сущность отряда
+///     Отряд
 /// </summary>
-public class UnitEntity
+[Table("units")]
+public class UnitEntity : BaseEntity
 {
     /// <summary>
-    ///  Id сущности
+    ///     Название
     /// </summary>
-    [JsonProperty("id")]
-    public ObjectId Id { get; set; }
-    
-    /// <summary>
-    ///     Название Отряда
-    /// </summary>
-    [JsonProperty("name")]
+    [Column("name")]
     public string Name { get; set; }
+
+    /// <summary>
+    ///     Максимальное количество отряда
+    /// </summary>
+    [Column("max_unit_count")]
+    public int MaxUnitCount { get; set; }
     
     /// <summary>
-    ///     Цена в очках
+    ///     Стоимость отряда
     /// </summary>
-    [JsonProperty("point_cost")]
-    public int PointCost { get; set; }
+    [Column("unit_cost")]
+    public int UnitCost { get; set; }
+    
+    #region Profile
+
+    /// <summary>
+    ///     Количество передвижения
+    /// </summary>
+    [Column("move")]
+    public int Move { get; set; }
     
     /// <summary>
-    ///     Оганичение в численности
+    ///     Умение 
     /// </summary>
-    [JsonProperty("max_unit_limit")]
-    public int MaxUnitLimit { get; set; }
+    [Column("weapon_skill")]
+    public int WeaponSkill { get; set; }
     
     /// <summary>
-    ///     Тип юнита
+    ///     Умение стрелять
     /// </summary>
-    [JsonProperty("type")]
-    public ModelType Type { get; set; } 
+    [Column("balistic_skill")]
+    public int BalisticSkill { get; set; }
+
+    /// <summary>
+    ///     Сила
+    /// </summary>
+    [Column("strength")]
+    public int Strength { get; set; }
     
     /// <summary>
-    ///     Профиль модели
+    ///     Стойкость
     /// </summary>
-    [JsonProperty("profile")]
-    public UnitProfilEntity Profile { get; set; }
+    [Column("toughest")]
+    public int Toughest { get; set; }
     
     /// <summary>
-    ///     Спец правила
+    ///     Количетсов ран
     /// </summary>
-    [JsonProperty("rules")]
-    public List<SpecialRuleEntity> Rules { get; set; }
+    [Column("woonds")]
+    public int Woonds { get; set; }
     
     /// <summary>
-    ///     Доступное оружие
+    ///     Инициатива
     /// </summary>
-    [JsonProperty("weapons")]
-    public List<CloseCombatWeaponEntity> Weapons { get; set; }
+    [Column("initiative")]
+    public int Initiative { get; set; }
     
     /// <summary>
-    ///     Доступное дальнее оружие
+    ///     Количестов атак
     /// </summary>
-    [JsonProperty("range_weapons")]
-    public List<RangeWeaponEntity> RangeWeapon { get; set; }
+    [Column("attacks")]
+    public int Attacks { get; set; }
+    
+    /// <summary>
+    ///     Лидерство
+    /// </summary>
+    [Column("leadership")]
+    public int Leadership { get; set; }
+    
+    #endregion
+    
+    /// <summary>
+    ///     Id банды
+    /// </summary>
+    [ForeignKey(nameof(Band))]
+    [Column("band_id")]
+    public long BandId { get; set; }
+
+    /// <summary>
+    ///     Банда
+    /// </summary>
+    public BandEntity Band { get; set; }
     
     /// <summary>
     ///     Доступная броня
     /// </summary>
-    [JsonProperty("armours")]
-    public List<ArmorEntity> Armours { get; set; }
+    public List<ArmorEntity> Armors { get; set; }
+    
+    /// <summary>
+    ///     Доступное оружие ближнего боя
+    /// </summary>
+    public List<CloseCombatWeaponEntity> CloseCombatWeapons { get; set; }
 }

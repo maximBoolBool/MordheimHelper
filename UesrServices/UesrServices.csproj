@@ -8,6 +8,12 @@
 
     <ItemGroup>
       <ProjectReference Include="..\SharedServices\SharedServices.csproj" />
+      <ProjectReference Include="..\UserEntities\UserEntities.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="12.0.1" />
+      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     </ItemGroup>
 
 </Project>

@@ -1,10 +1,11 @@
-﻿using MongoDB.Driver;
+﻿using Microsoft.EntityFrameworkCore;
 using RuleEntities.Entities;
+using UserEntities.Repositories;
 
 namespace RuleEntities.Repositories.Impl;
 
 /// <inheritdoc cref="IUnitRepository"/>
-public class UnitRepository : MongoDbRepository<UnitEntity>, IUnitRepository
+public class UnitRepository : BaseRepositiry<UnitEntity>, IUnitRepository
 {
-    public UnitRepository(IMongoDatabase db) : base(db) { }
+    public UnitRepository(DbContext db) : base(db) { }
 }

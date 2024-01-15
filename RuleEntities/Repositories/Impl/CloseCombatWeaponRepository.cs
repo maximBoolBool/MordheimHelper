@@ -1,10 +1,13 @@
-﻿using MongoDB.Driver;
+﻿
+using Microsoft.EntityFrameworkCore;
+using RuleEntities.Entities;
+using UserEntities.Repositories;
 
 namespace RuleEntities.Repositories.Impl;
 
 /// <inheritdoc cref="ICloseCombatWeaponRepository"/>
 public class CloseCombatWeaponRepository : 
-    MongoDbRepository<CloseCombatWeaponRepository> , ICloseCombatWeaponRepository
+    BaseRepositiry<CloseCombatWeaponEntity> , ICloseCombatWeaponRepository
 {
-    public CloseCombatWeaponRepository(IMongoDatabase db) : base(db) { }
+    public CloseCombatWeaponRepository(DbContext db) : base(db) { }
 }

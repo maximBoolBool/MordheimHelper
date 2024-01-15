@@ -1,9 +1,12 @@
-﻿namespace RuleEntities.Repositories;
+﻿using RuleEntities.Entities;
+using SharedServices;
+
+namespace RuleEntities.Repositories;
 
 /// <summary>
 ///     Репозиторий для работы с оржием ближнего боя
 /// </summary>
-public interface ICloseCombatWeaponRepository
+public interface ICloseCombatWeaponRepository : IRepository<CloseCombatWeaponEntity>
 {
     
 }

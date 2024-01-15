@@ -1,27 +1,27 @@
-﻿namespace RuleEntities.Entities;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using RuleEntities.Entities.SpecialRules;
+using SharedEntities.Entities;
+
+namespace RuleEntities.Entities;
 
 /// <summary>
-///     Сущность правил банды
+///     Банда
 /// </summary>
-public class BandEntity
+public class BandEntity : BaseEntity
 {
     /// <summary>
-    ///     Id банды
+    ///     Навзвание
     /// </summary>
-    public long Id { get; set; }
-    
-    /// <summary>
-    ///     Название
-    /// </summary>
+    [Column("name")]
     public string Name { get; set; }
     
     /// <summary>
     ///     Отряды
     /// </summary>
     public List<UnitEntity> Units { get; set; }
-
+    
     /// <summary>
-    ///     Спец правила
+    ///     Спец правила отряда
     /// </summary>
-    public List<BandSpecialRuleEntity> Rules { get; set; }
+    public List<BandSpecialRuleEntity> SpecialRules { get; set; }
 }

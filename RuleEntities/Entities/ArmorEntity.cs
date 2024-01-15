@@ -1,28 +1,34 @@
-﻿using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
-using Newtonsoft.Json;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using RuleEntities.Entities.SpecialRules;
+using SharedEntities.Entities;
 
 namespace RuleEntities.Entities;
 
 /// <summary>
-///     Броня модели
+///     Сущность брони
 /// </summary>
-public class ArmorEntity
+[Table("armors")]
+public class ArmorEntity : BaseEntity
 {
     /// <summary>
-    ///     Id сущности
+    ///     Навзвание брони
     /// </summary>
-    [JsonProperty("id")]
-    public ObjectId Id { get; set; }
+    [Column("name")]
+    public string Name { get; set; }
+    
     /// <summary>
-    ///     Описание 
+    ///     Описание
     /// </summary>
-    [JsonProperty("description")]
+    [Column("description")]
     public string Description { get; set; }
     
     /// <summary>
-    ///     Спецправила
+    ///     Отряда которым доступна броня
     /// </summary>
-    [JsonProperty("rules")]
-    public List<SpecialRuleEntity> SpecialRules { get; set; } 
+    public List<UnitEntity> Units { get; set; }
+
+    /// <summary>
+    ///     Правила
+    /// </summary>
+    public List<ArmorSpecialRuleEntity> Rules { get; set; }
 }

@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserEntities", "UserEntitie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserService", "UserService\UserService.csproj", "{DE7A8D97-27EB-430C-A322-BFA28D213A3E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaServices", "KafkaServices\KafkaServices.csproj", "{53FD8413-2656-4035-8F84-05B8C2ECDED4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,9 @@ Global
 		{DE7A8D97-27EB-430C-A322-BFA28D213A3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE7A8D97-27EB-430C-A322-BFA28D213A3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE7A8D97-27EB-430C-A322-BFA28D213A3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53FD8413-2656-4035-8F84-05B8C2ECDED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53FD8413-2656-4035-8F84-05B8C2ECDED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53FD8413-2656-4035-8F84-05B8C2ECDED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53FD8413-2656-4035-8F84-05B8C2ECDED4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

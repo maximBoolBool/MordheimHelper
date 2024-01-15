@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using SharedEntities.Entities;
 
 namespace UserEntities.Entities;
 
@@ -19,7 +20,7 @@ public class UserEntity : BaseEntity
     /// </summary>
     [Column("password")]
     public string Password { get; set; }
-    
+
     /// <summary>
     ///     Банды пользователя
     /// </summary>

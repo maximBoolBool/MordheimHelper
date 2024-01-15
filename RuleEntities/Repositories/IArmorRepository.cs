@@ -1,9 +1,12 @@
-﻿namespace RuleEntities.Repositories;
+﻿using RuleEntities.Entities;
+using SharedServices;
+
+namespace RuleEntities.Repositories;
 
 /// <summary>
 ///     Репозиторий для брони
 /// </summary>
-public interface IArmorRepository
+public interface IArmorRepository : IRepository<ArmorEntity>
 {
     
 }

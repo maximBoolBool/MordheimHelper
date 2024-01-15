@@ -1,9 +1,11 @@
-﻿using MongoDB.Driver;
+﻿using Microsoft.EntityFrameworkCore;
+using RuleEntities.Entities;
+using UserEntities.Repositories;
 
 namespace RuleEntities.Repositories.Impl;
 
 /// <inheritdoc cref="IBandRepository"/>
-public class BandRepository : MongoDbRepository<BandRepository>, IBandRepository
+public class BandRepository : BaseRepositiry<BandEntity>, IBandRepository
 {
-    public BandRepository(IMongoDatabase db) : base(db) { }
+    public BandRepository(DbContext db) : base(db) { }
 }

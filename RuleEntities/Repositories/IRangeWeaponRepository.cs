@@ -1,9 +1,12 @@
-﻿namespace RuleEntities.Repositories;
+﻿using RuleEntities.Entities;
+using SharedServices;
+
+namespace RuleEntities.Repositories;
 
 /// <summary>
 ///     Репозиторий для работы с дальнего боя 
 /// </summary>
-public interface IRangeWeaponRepository
+public interface IRangeWeaponRepository : IRepository<RangeWeaponEntity>
 {
     
 }

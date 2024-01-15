@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace UserEntities.Entities;
+namespace SharedEntities.Entities;
 
 /// <summary>
 ///     Базовая сущность в бд
@@ -12,4 +12,10 @@ public class BaseEntity
     /// </summary>
     [Column("id")]
     public long Id { get; set; }
+    
+    /// <summary>
+    ///     Статус активности
+    /// </summary>
+    [Column("is_active")]
+    public bool IsActive { get; set; } = true;
 }

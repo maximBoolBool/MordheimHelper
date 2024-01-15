@@ -88,7 +88,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\SharedEntities\\SharedEntities.csproj": {
+                "projectPath": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\SharedEntities\\SharedEntities.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -100,6 +104,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -166,6 +176,10 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [

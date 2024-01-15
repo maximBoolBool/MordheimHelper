@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using MongoDB.Bson;
-using RuleEntities.Entities;
+﻿using Microsoft.AspNetCore.Mvc;
 using RuleEntities.Repositories;
 
 namespace RuleService.Controllers;

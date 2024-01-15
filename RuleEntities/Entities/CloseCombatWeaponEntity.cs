@@ -1,40 +1,13 @@
-﻿using Newtonsoft.Json;
-using SharedEntities;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using SharedEntities.Entities;
 
 namespace RuleEntities.Entities;
 
 /// <summary>
-///     Сущность оружия
+///     Оружие ближнего боя
 /// </summary>
-public class CloseCombatWeaponEntity
+[Table("close_combat_weapons")]
+public class CloseCombatWeaponEntity : BaseEntity
 {
-    /// <summary>
-    ///     Id сущности
-    /// </summary>
-    [JsonProperty("id")]
-    public long Id { get; set; }
-    
-    /// <summary>
-    ///     Бонус к силе
-    /// </summary>
-    [JsonProperty("strength_bonus")]
-    public int StrengthBonus { get; set; }
 
-    /// <summary>
-    ///     Стоймость в очках
-    /// </summary>
-    [JsonProperty("point_cost")]
-    public int PointCost { get; set; } 
-    
-    /// <summary>
-    ///     Вид оружия
-    /// </summary>
-    [JsonProperty("type")]
-    public CloseCombatWeaponType Type { get; set; }
-    
-    /// <summary>
-    ///     Специальные правила оружия
-    /// </summary>
-    [JsonProperty("special_rules")]
-    public List<SpecialRuleEntity> SpecialRules { get; set; }
 }

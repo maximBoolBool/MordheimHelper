@@ -1,11 +1,23 @@
 ﻿namespace SharedServices;
 
 /// <summary>
-///     Базовый CRUD сервис
+///     Репозитория для SQL бд
 /// </summary>
 /// <typeparam name="T"></typeparam>
-public abstract class BaseCRUDService<T>
+public interface IRepository<T>
 {
+    /// <summary>
+    ///     Сохрагить изменения
+    /// </summary>
+    /// <returns></returns>
+    Task SaveChangesAsync();
+
+    /// <summary>
+    ///    Создать запрос к бд 
+    /// </summary>
+    /// <returns></returns>
+    public IQueryable<T> CreateQuery();
+    
     /// <summary>
     ///     Добавить
     /// </summary>
@@ -13,14 +25,6 @@ public abstract class BaseCRUDService<T>
     /// <param name="cancellationToken"></param>
     /// <returns></returns>
     public abstract Task Create(T entity, CancellationToken cancellationToken);
-
-    /// <summary>
-    ///     Изменить 
-    /// </summary>
-    /// <param name="entity"></param>
-    /// <param name="cancellationToken"></param>
-    /// <returns></returns>
-    public abstract Task Update(T entity, CancellationToken cancellationToken);
 
     /// <summary>
     ///     Удалить по Id
@@ -36,5 +40,5 @@ public abstract class BaseCRUDService<T>
     /// <param name="id"></param>
     /// <param name="cancellationToken"></param>
     /// <returns></returns>
-    public abstract Task<T?> FindBy(int id, CancellationToken cancellationToken);
+    public abstract Task<T?> FindById(long id, CancellationToken cancellationToken);
 }
