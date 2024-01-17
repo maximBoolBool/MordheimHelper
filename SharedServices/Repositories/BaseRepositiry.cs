@@ -1,18 +1,22 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Net;
+using Microsoft.EntityFrameworkCore;
 using SharedEntities.Entities;
-using SharedServices;
+using SharedEntities.Models;
 
-namespace UserEntities.Repositories;
+namespace SharedServices.Repositories;
 
 /// <summary>
 ///     Базовый репозиторий для SQL бд
 /// </summary>
-/// <typeparam name="T"></typeparam>
-public abstract class BaseRepositiry<T> : IRepository<T> where T : BaseEntity
+/// <typeparam name="TEntity"></typeparam>
+/// <typeparam name="TFilter"></typeparam>
+public abstract class BaseRepositiry<TEntity, TFilter> : IRepository<TEntity, TFilter>
+    where TEntity : BaseEntity
+    where TFilter : IBaseFilter
 {
     protected readonly DbContext _dbContext;
 
-    protected readonly DbSet<T> _dbSet;
+    protected readonly DbSet<TEntity> _dbSet;
 
     /// <summary>
     ///     .ctor
@@ -21,36 +25,46 @@ public abstract class BaseRepositiry<T> : IRepository<T> where T : BaseEntity
     public BaseRepositiry(DbContext dbContext)
     {
         _dbContext = dbContext;
-        _dbSet = dbContext.Set<T>();
+        _dbSet = dbContext.Set<TEntity>();
     }
     
     /// <inheritdoc cref="IRepository{T}"/>
-    public async Task Create(T entity, CancellationToken cancellationToken)
+    public async Task Create(TEntity entity, CancellationToken cancellationToken)
     {
-        await _dbContext.Set<T>().AddAsync(entity);
+        await _dbContext.Set<TEntity>().AddAsync(entity);
     }
 
     /// <inheritdoc cref="IRepository{T}"/>
     public async Task Remove(long id, CancellationToken cancellationToken)
     {
-        var entity = await _dbContext.Set<T>().FirstOrDefaultAsync(e => e.Id == id, cancellationToken);
+        var entity = await _dbContext.Set<TEntity>().FirstOrDefaultAsync(e => e.Id == id, cancellationToken);
+
+        if (entity == null)
+            throw new ErrorException(HttpStatusCode.NotFound, "Can not found");
+        
         entity.IsActive = false;
         _dbContext.Update(entity);
         await _dbContext.SaveChangesAsync(cancellationToken);
     }
 
     /// <inheritdoc cref="IRepository{T}"/>
-    public async Task<T?> FindById(long id, CancellationToken cancellationToken)
+    public async Task<TEntity?> FindById(long id, CancellationToken cancellationToken)
     {
-        return await _dbContext.Set<T>().FirstOrDefaultAsync(e => e.Id == id, cancellationToken);
+        return await _dbContext.Set<TEntity>().FirstOrDefaultAsync(e => e.Id == id, cancellationToken);
     }
     
     /// <inheritdoc cref="IRepository{T}"/>
-    public IQueryable<T> CreateQuery()
+    public IQueryable<TEntity> CreateQuery()
     {
-        return _dbContext.Set<T>().AsQueryable();
+        return _dbContext.Set<TEntity>().AsQueryable();
     }
-    
+
+    /// <inheritdoc cref="IRepository{T}"/>
+    public virtual async Task<TEntity[]> ListAsync()
+    {
+        throw new NotImplementedException();
+    }
+
     /// <inheritdoc cref="IRepository{T}"/>
     public async Task SaveChangesAsync()
     {

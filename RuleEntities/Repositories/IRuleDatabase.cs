@@ -1,6 +1,9 @@
 ﻿namespace RuleEntities.Repositories;
 
-public class IRuleDatabase
+/// <summary>
+///     Бд для работы с 
+/// </summary>
+public interface IRuleDatabase
 {
     public IArmorRepository Armors { get; }
     
@@ -12,5 +15,5 @@ public class IRuleDatabase
     
     public IUnitRepository Units { get; set; }
     
-    public IUnitWeaponSpecialRuleRepository UnitSpecialRules { get; set; }
+    public IWeaponSpecialRuleRepository SpecialRules { get; set; }
 }

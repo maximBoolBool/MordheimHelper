@@ -9,3 +9,7 @@ C:\Users\petra\RiderProjects\MordheimHelper\SharedServices\obj\Debug\net7.0\Shar
 C:\Users\petra\RiderProjects\MordheimHelper\SharedServices\obj\Debug\net7.0\refint\SharedServices.dll
 C:\Users\petra\RiderProjects\MordheimHelper\SharedServices\obj\Debug\net7.0\SharedServices.pdb
 C:\Users\petra\RiderProjects\MordheimHelper\SharedServices\obj\Debug\net7.0\ref\SharedServices.dll
+C:\Users\petra\RiderProjects\MordheimHelper\SharedServices\bin\Debug\net7.0\SharedEntities.dll
+C:\Users\petra\RiderProjects\MordheimHelper\SharedServices\bin\Debug\net7.0\SharedEntities.pdb
+C:\Users\petra\RiderProjects\MordheimHelper\SharedServices\obj\Debug\net7.0\SharedServices.csproj.AssemblyReference.cache
+C:\Users\petra\RiderProjects\MordheimHelper\SharedServices\obj\Debug\net7.0\SharedServices.csproj.CopyComplete

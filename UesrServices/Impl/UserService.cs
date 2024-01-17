@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using AutoMapper;
 using SharedEntities.Models;
-using UesrServices.Models;
+using UesrServices.Models.Request;
 using UserEntities.Entities;
 using UserEntities.Repositories;
 

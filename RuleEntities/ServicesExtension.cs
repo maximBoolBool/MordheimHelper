@@ -16,7 +16,8 @@ public static class ServicesExtension
         services.AddScoped<IBandSpecialRuleRepository, BandSpeicalRuleRepository>();
         services.AddScoped<ICloseCombatWeaponRepository, CloseCombatWeaponRepository>();
         services.AddScoped<IRangeWeaponRepository, RangeWeaponRepository>();
-        services.AddScoped<IUnitWeaponSpecialRuleRepository, UnitWeaponSpecialRuleRepository>();
+        services.AddScoped<IWeaponSpecialRuleRepository, WeaponSpecialRuleRepository>();
         services.AddScoped<IUnitRepository, UnitRepository>();
+        services.AddScoped<IRuleDatabase, RuleDatabase>();
     }
 }

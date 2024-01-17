@@ -3,9 +3,11 @@
 /// <summary>
 ///     Репозитория для SQL бд
 /// </summary>
-/// <typeparam name="T"></typeparam>
-public interface IRepository<T>
+/// <typeparam name="TResponse"></typeparam>
+public interface IRepository<TResponse, TFilter>
 {
+    public Task<TResponse[]> ListAsync();
+
     /// <summary>
     ///     Сохрагить изменения
     /// </summary>
@@ -16,7 +18,7 @@ public interface IRepository<T>
     ///    Создать запрос к бд 
     /// </summary>
     /// <returns></returns>
-    public IQueryable<T> CreateQuery();
+    public IQueryable<TResponse> CreateQuery();
     
     /// <summary>
     ///     Добавить
@@ -24,7 +26,7 @@ public interface IRepository<T>
     /// <param name="entity"></param>
     /// <param name="cancellationToken"></param>
     /// <returns></returns>
-    public abstract Task Create(T entity, CancellationToken cancellationToken);
+    public abstract Task Create(TResponse entity, CancellationToken cancellationToken);
 
     /// <summary>
     ///     Удалить по Id
@@ -40,5 +42,5 @@ public interface IRepository<T>
     /// <param name="id"></param>
     /// <param name="cancellationToken"></param>
     /// <returns></returns>
-    public abstract Task<T?> FindById(long id, CancellationToken cancellationToken);
+    public abstract Task<TResponse?> FindById(long id, CancellationToken cancellationToken);
 }

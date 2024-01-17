@@ -1,10 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SharedServices.Repositories;
 using UserEntities.Entities;
+using UserEntities.Models;
 
 namespace UserEntities.Repositories.Impl;
 
 /// <inheritdoc cref="IUnitRepository"/>
-internal class UserRepository : BaseRepositiry<UserEntity>, IUserRepository
+internal class UserRepository : BaseRepositiry<UserEntity, UserFilter>, IUserRepository
 {
     public UserRepository(DbContext dbContext) : base(dbContext) { }
     

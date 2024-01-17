@@ -19,22 +19,4 @@ public class UnitController : Controller
         _unitRepository = unitRepository;
     }
 
-    #region GET ~api/untit
-
-    /// <summary>
-    ///     Получить отряд по Id
-    /// </summary>
-    /// <param name="cancellationToken"></param>
-    /// <returns></returns>
-    [
-        HttpGet,
-        Route("set")
-    ]
-    public async Task<IActionResult> GetUnit([FromQuery] string id, CancellationToken cancellationToken)
-    {
-        return Ok();
-    }
-
-
-    #endregion
 }

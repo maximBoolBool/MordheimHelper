@@ -10,3 +10,5 @@ C:\Users\petra\RiderProjects\MordheimHelper\SharedEntities\obj\Debug\net7.0\Shar
 C:\Users\petra\RiderProjects\MordheimHelper\SharedEntities\obj\Debug\net7.0\refint\SharedEntities.dll
 C:\Users\petra\RiderProjects\MordheimHelper\SharedEntities\obj\Debug\net7.0\SharedEntities.pdb
 C:\Users\petra\RiderProjects\MordheimHelper\SharedEntities\obj\Debug\net7.0\ref\SharedEntities.dll
+C:\Users\petra\RiderProjects\MordheimHelper\SharedEntities\bin\Debug\net7.0\SharedEntities.runtimeconfig.json
+C:\Users\petra\RiderProjects\MordheimHelper\SharedEntities\obj\Debug\net7.0\SharedEntities.genruntimeconfig.cache

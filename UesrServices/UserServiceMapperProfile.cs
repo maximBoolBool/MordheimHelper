@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using UesrServices.Models;
+using UesrServices.Models.Request;
 using UserEntities.Entities;
 
 namespace UesrServices;

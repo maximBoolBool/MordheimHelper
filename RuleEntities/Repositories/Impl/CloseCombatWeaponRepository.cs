@@ -1,13 +1,14 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
 using RuleEntities.Entities;
-using UserEntities.Repositories;
+using RuleEntities.Models;
+using SharedServices.Repositories;
 
 namespace RuleEntities.Repositories.Impl;
 
 /// <inheritdoc cref="ICloseCombatWeaponRepository"/>
 public class CloseCombatWeaponRepository : 
-    BaseRepositiry<CloseCombatWeaponEntity> , ICloseCombatWeaponRepository
+    BaseRepositiry<CloseCombatWeaponEntity, CloseCombatFilter> , ICloseCombatWeaponRepository
 {
     public CloseCombatWeaponRepository(DbContext db) : base(db) { }
 }
