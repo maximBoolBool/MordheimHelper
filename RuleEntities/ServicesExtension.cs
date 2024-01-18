@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using RuleEntities.Repositories;
 using RuleEntities.Repositories.Impl;
 
@@ -9,8 +10,9 @@ namespace RuleEntities;
 /// </summary>
 public static class ServicesExtension
 {
-    public static void AddRepositories(this IServiceCollection services)
+    public static void AddRuleRepositories(this IServiceCollection services)
     {
+        services.AddScoped<DbContext, RuleContext>();
         services.AddScoped<IArmorRepository, ArmorRepository>();
         services.AddScoped<IBandRepository, BandRepository>();
         services.AddScoped<IBandSpecialRuleRepository, BandSpeicalRuleRepository>();

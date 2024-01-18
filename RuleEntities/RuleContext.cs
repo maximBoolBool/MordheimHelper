@@ -17,4 +17,10 @@ public class RuleContext : DbContext
     public DbSet<RangeWeaponEntity> RangeWeapons { get; set; } = null!;
 
     public DbSet<UnitEntity> Units { get; set; } = null!;
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        optionsBuilder.UseNpgsql();
+        base.OnConfiguring(optionsBuilder);
+    }
 }

@@ -1,14 +1,13 @@
-﻿using System.Data.Common;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using UserEntities.Repositories;
 using UserEntities.Repositories.Impl;
 
 namespace UserEntities;
 
-public class ServicesExtension
+public static class ServicesExtension
 {
-    public static void AddRepositories(ServiceCollection services )
+    public static void AddUserRepositories(this IServiceCollection services )
     {
         services.AddScoped<DbContext, UserDbContext>();
         services.AddScoped<IBandRepository, BandRepository>();

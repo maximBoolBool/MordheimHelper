@@ -1,0 +1,15 @@
+C:\Users\petra\RiderProjects\MordheimHelper\KafkaServices\bin\Debug\net7.0\KafkaServices.deps.json
+C:\Users\petra\RiderProjects\MordheimHelper\KafkaServices\bin\Debug\net7.0\KafkaServices.dll
+C:\Users\petra\RiderProjects\MordheimHelper\KafkaServices\bin\Debug\net7.0\KafkaServices.pdb
+C:\Users\petra\RiderProjects\MordheimHelper\KafkaServices\bin\Debug\net7.0\SharedEntities.dll
+C:\Users\petra\RiderProjects\MordheimHelper\KafkaServices\bin\Debug\net7.0\SharedEntities.pdb
+C:\Users\petra\RiderProjects\MordheimHelper\KafkaServices\obj\Debug\net7.0\KafkaServices.csproj.AssemblyReference.cache
+C:\Users\petra\RiderProjects\MordheimHelper\KafkaServices\obj\Debug\net7.0\KafkaServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\petra\RiderProjects\MordheimHelper\KafkaServices\obj\Debug\net7.0\KafkaServices.AssemblyInfoInputs.cache
+C:\Users\petra\RiderProjects\MordheimHelper\KafkaServices\obj\Debug\net7.0\KafkaServices.AssemblyInfo.cs
+C:\Users\petra\RiderProjects\MordheimHelper\KafkaServices\obj\Debug\net7.0\KafkaServices.csproj.CoreCompileInputs.cache
+C:\Users\petra\RiderProjects\MordheimHelper\KafkaServices\obj\Debug\net7.0\KafkaServices.csproj.CopyComplete
+C:\Users\petra\RiderProjects\MordheimHelper\KafkaServices\obj\Debug\net7.0\KafkaServices.dll
+C:\Users\petra\RiderProjects\MordheimHelper\KafkaServices\obj\Debug\net7.0\refint\KafkaServices.dll
+C:\Users\petra\RiderProjects\MordheimHelper\KafkaServices\obj\Debug\net7.0\KafkaServices.pdb
+C:\Users\petra\RiderProjects\MordheimHelper\KafkaServices\obj\Debug\net7.0\ref\KafkaServices.dll

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RuleServices.Services;
 
 namespace RuleService.Controllers;
 
@@ -10,13 +11,16 @@ public class BandController : Controller
 {
     #region Fields
 
-    
+    private IBandService _bandService;
 
     #endregion
     
     #region .ctor
 
-    public BandController() { }
+    public BandController(IBandService bandService)
+    {
+        _bandService = bandService;
+    }
 
     #endregion
 
@@ -25,9 +29,10 @@ public class BandController : Controller
     /// <summary>
     ///     Получить лист банд
     /// </summary>
-    public async Task<IActionResult> List()
+    public async Task<IActionResult> List(CancellationToken cancellationToken)
     {
-        return Ok();
+        var response = await _bandService.ListAsync(cancellationToken);
+        return Ok(response);
     }
     
     #endregion
@@ -37,9 +42,10 @@ public class BandController : Controller
     /// <summary>
     ///     Получить банду по Id
     /// </summary>
-    public async Task<IActionResult> GetBand([FromQuery] long id)
+    public async Task<IActionResult> GetBand([FromQuery] long id, CancellationToken cancellationToken)
     {
-        return Ok();
+        var response = await _bandService.GetAsync(id, cancellationToken);
+        return Ok(response);
     }
 
     #endregion

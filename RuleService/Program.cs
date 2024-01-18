@@ -1,9 +1,13 @@
+using Microsoft.EntityFrameworkCore;
 using RuleEntities;
 using RuleServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddRepositories();
+var conection = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<RuleContext>(opt => opt.UseNpgsql(conection));
+builder.Services.AddRuleRepositories();
 builder.Services.AddRuleService();
 builder.Services.AddControllers();
 
@@ -12,5 +16,4 @@ var app = builder.Build();
 app.MapGet("/", () => "Hello World!");
 app.MapControllers();
 
-
-app.Run();
+await app.RunAsync();

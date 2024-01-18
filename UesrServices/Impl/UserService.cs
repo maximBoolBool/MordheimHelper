@@ -14,6 +14,9 @@ public class UserService : IUserService
 
     private readonly IMapper _mapper;
 
+    /// <summary>
+    ///     .ctor
+    /// </summary>
     public UserService(IUserRepository repository, IMapper mapper)
     {
         _repository = repository;
@@ -62,5 +65,17 @@ public class UserService : IUserService
         await _repository.Remove(user.Id, cancellationToken);
         
         return true;
+    }
+
+    /// <inheritdoc cref="IUserService"/>
+    public async Task LogoffAsync(long id, CancellationToken cancellationToken)
+    {
+        throw new NotImplementedException();
+    }
+
+    /// <inheritdoc cref="IUserService"/>
+    public async Task RefreshAsync()
+    {
+        throw new NotImplementedException();
     }
 }

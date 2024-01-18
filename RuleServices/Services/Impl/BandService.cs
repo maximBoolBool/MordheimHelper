@@ -16,10 +16,18 @@ public class BandService : IBandService
         _mapper = mapper;
     }
 
-    public async Task<BandModel[]> List()
+    public async Task<BandModel[]> ListAsync(CancellationToken cancellationToken)
     {
         var entities = await _db.Bands.ListAsync();
         var response = _mapper.Map<BandModel[]>(entities);
         return response;
     }
+
+    public async Task<BandModel> GetAsync(long id, CancellationToken cancellationToken)
+    {
+        var entity = await _db.Bands.FindById(id, cancellationToken);
+        var response = _mapper.Map<BandModel>(entity);
+        return response;
+    }
+    
 }

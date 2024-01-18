@@ -11,7 +11,6 @@ public interface IUserService
     /// <summary>
     ///     Зарегестрировать нового пользователя
     /// </summary>
-    /// <returns></returns>
     Task<bool> RegistrateUserAsync(UserRequestDto userRequest, CancellationToken cancellationToken);
 
     /// <summary>
@@ -31,4 +30,14 @@ public interface IUserService
     /// </summary>
     /// <returns></returns>
     Task<bool> DeleteUserAsync(long id, CancellationToken cancellationToken);
+
+    /// <summary>
+    ///     Выйти из учетной записи
+    /// </summary>
+    Task LogoffAsync(long id, CancellationToken cancellationToken);
+    
+    /// <summary>
+    ///     Обновить токены
+    /// </summary>
+    Task RefreshAsync();
 }

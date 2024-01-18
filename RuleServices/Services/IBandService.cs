@@ -4,5 +4,7 @@ namespace RuleServices.Services;
 
 public interface IBandService
 {
-    public Task<BandModel[]> List();
+    public Task<BandModel[]> ListAsync(CancellationToken cancellationToken);
+
+    public Task<BandModel> GetAsync(long id, CancellationToken cancellationToken);
 }
