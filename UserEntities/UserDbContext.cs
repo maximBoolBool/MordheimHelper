@@ -8,15 +8,30 @@ namespace UserEntities;
 /// </summary>
 public class UserDbContext : DbContext
 {
+    #region .ctor
+    
+    public UserDbContext(DbContextOptions<UserDbContext> options) : base(options) { }
+    
+    #endregion
+
+    #region Tables
+
     public DbSet<UserEntity> Users { get; set; } = null!;
 
     public DbSet<BandEntity> Bands { get; set; } = null!;
 
     public DbSet<UnitEntity> Units { get; set; } = null!;
+    
+    #endregion
 
+    #region Overrides
+    
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseNpgsql("");
+        Database.Migrate();
         base.OnConfiguring(optionsBuilder);
     }
+    
+    #endregion
+
 }

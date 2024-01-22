@@ -1,6 +1,6 @@
 ﻿using Confluent.Kafka;
+using KafkaServices.Configs;
 using Microsoft.Extensions.Logging;
-using SharedEntities.Configs;
 
 namespace KafkaServices.Impl;
 

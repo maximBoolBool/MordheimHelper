@@ -1,4 +1,4 @@
-﻿namespace SharedEntities.Configs;
+﻿namespace KafkaServices.Configs;
 
 /// <summary>
 ///     Интерфейс

@@ -6,6 +6,14 @@ namespace RuleEntities;
 
 public class RuleContext : DbContext
 {
+    #region .ctor
+
+    public RuleContext(DbContextOptions<RuleContext> options) : base(options) { }
+    
+    #endregion
+    
+    #region Tables
+
     public DbSet<ArmorEntity> Armors { get; set; } = null!;
 
     public DbSet<BandEntity> Bands { get; set; } = null!;
@@ -17,10 +25,17 @@ public class RuleContext : DbContext
     public DbSet<RangeWeaponEntity> RangeWeapons { get; set; } = null!;
 
     public DbSet<UnitEntity> Units { get; set; } = null!;
+    
+    #endregion
 
+    #region Overrides
+    
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseNpgsql();
+        Database.Migrate();
         base.OnConfiguring(optionsBuilder);
     }
+    
+    #endregion
+
 }

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Qh9b4PRO1ffcKNdiaNtqCBEJVo15Isphof/5Xpn9+6ZZOQXmq4mD7LlqMvPNllC7uKmCvGkkugH5lTJSuviruQ==",
+  "dgSpecHash": "Bv2gu9O84c5oZJnz1tVqc9UUCTHjCzm1xaJtCuJ5MKVP7SAvwLqypl05ZLbJbJMHt/PX2oOW1REWAJrSH1cy7A==",
   "success": true,
   "projectFilePath": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\RuleServices\\RuleServices.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\petra\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\petra\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\petra\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\petra\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0\\microsoft.entityframeworkcore.7.0.0.nupkg.sha512",
     "C:\\Users\\petra\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.0\\microsoft.entityframeworkcore.abstractions.7.0.0.nupkg.sha512",

@@ -51,8 +51,7 @@ public class UserController : Controller
         await _userService.LogoffAsync(id, cancellationToken);
         return Ok();
     }
-
-
+    
     #endregion
 
     #region Post api/user/refresh

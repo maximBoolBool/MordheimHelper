@@ -1,5 +1,5 @@
 ﻿using Confluent.Kafka;
-using SharedEntities.Configs;
+using KafkaServices.Configs;
 
 namespace KafkaServices.Impl;
 
