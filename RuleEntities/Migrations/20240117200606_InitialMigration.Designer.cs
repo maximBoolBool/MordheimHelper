@@ -11,7 +11,7 @@ using RuleEntities;
 
 namespace RuleEntities.Migrations
 {
-    [DbContext(typeof(RuleContext))]
+    [DbContext(typeof(RuleDbContext))]
     [Migration("20240117200606_InitialMigration")]
     partial class InitialMigration
     {

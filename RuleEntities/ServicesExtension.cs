@@ -12,7 +12,7 @@ public static class ServicesExtension
 {
     public static void AddRuleRepositories(this IServiceCollection services)
     {
-        services.AddScoped<DbContext, RuleContext>();
+        services.AddScoped<DbContext, RuleDbContext>();
         services.AddScoped<IArmorRepository, ArmorRepository>();
         services.AddScoped<IBandRepository, BandRepository>();
         services.AddScoped<IBandSpecialRuleRepository, BandSpeicalRuleRepository>();
@@ -20,6 +20,6 @@ public static class ServicesExtension
         services.AddScoped<IRangeWeaponRepository, RangeWeaponRepository>();
         services.AddScoped<IWeaponSpecialRuleRepository, WeaponSpecialRuleRepository>();
         services.AddScoped<IUnitRepository, UnitRepository>();
-        services.AddScoped<IRuleDatabase, RuleDatabase>();
+        services.AddScoped<IRuleDatabaseWorker, RuleDatabaseWorker>();
     }
 }

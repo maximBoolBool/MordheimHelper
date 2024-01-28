@@ -1,6 +1,6 @@
 ﻿using KafkaServices;
-using UesrServices.Models.Response;
+using SharedEntities.Models.DTO.Response;
 
 namespace UesrServices.KafkaServices;
 
-public interface IKafkaUserConsumer : IKafkaConsumer<UserResponseDto>  { }
+public interface IKafkaUserConsumer : IKafkaConsumer<UserResponseDto> { }

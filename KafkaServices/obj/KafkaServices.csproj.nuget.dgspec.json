@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\SharedEntities\\SharedEntities.csproj": {
-                "projectPath": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\SharedEntities\\SharedEntities.csproj"
+              "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\Shared\\Shared.csproj": {
+                "projectPath": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\Shared\\Shared.csproj"
               }
             }
           }
@@ -73,14 +73,14 @@
         }
       }
     },
-    "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\SharedEntities\\SharedEntities.csproj": {
+    "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\SharedEntities\\SharedEntities.csproj",
-        "projectName": "SharedEntities",
-        "projectPath": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\SharedEntities\\SharedEntities.csproj",
+        "projectUniqueName": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\Shared\\Shared.csproj",
+        "projectName": "Shared",
+        "projectPath": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\Shared\\Shared.csproj",
         "packagesPath": "C:\\Users\\petra\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\SharedEntities\\obj\\",
+        "outputPath": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\petra\\AppData\\Roaming\\NuGet\\NuGet.Config",

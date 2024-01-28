@@ -630,7 +630,7 @@
         "dependencies": {
           "Confluent.Kafka": "2.3.0",
           "Microsoft.Extensions.Logging.Console": "7.0.0",
-          "SharedEntities": "1.0.0"
+          "Shared": "1.0.0"
         },
         "compile": {
           "bin/placeholder/KafkaServices.dll": {}
@@ -639,31 +639,31 @@
           "bin/placeholder/KafkaServices.dll": {}
         }
       },
-      "SharedEntities/1.0.0": {
+      "Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
-          "bin/placeholder/SharedEntities.dll": {}
+          "bin/placeholder/Shared.dll": {}
         },
         "runtime": {
-          "bin/placeholder/SharedEntities.dll": {}
+          "bin/placeholder/Shared.dll": {}
         }
       },
-      "SharedServices/1.0.0": {
+      "SharedDataBase/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.0",
-          "SharedEntities": "1.0.0"
+          "Shared": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/SharedServices.dll": {}
+          "bin/placeholder/SharedDataBase.dll": {}
         },
         "runtime": {
-          "bin/placeholder/SharedServices.dll": {}
+          "bin/placeholder/SharedDataBase.dll": {}
         }
       },
       "UesrServices/1.0.0": {
@@ -673,7 +673,7 @@
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "KafkaServices": "1.0.0",
-          "SharedServices": "1.0.0",
+          "SharedDataBase": "1.0.0",
           "UserEntities": "1.0.0"
         },
         "compile": {
@@ -690,8 +690,8 @@
           "Microsoft.EntityFrameworkCore": "7.0.0",
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.0",
-          "SharedEntities": "1.0.0",
-          "SharedServices": "1.0.0"
+          "Shared": "1.0.0",
+          "SharedDataBase": "1.0.0"
         },
         "compile": {
           "bin/placeholder/UserEntities.dll": {}
@@ -1603,15 +1603,15 @@
       "path": "../KafkaServices/KafkaServices.csproj",
       "msbuildProject": "../KafkaServices/KafkaServices.csproj"
     },
-    "SharedEntities/1.0.0": {
+    "Shared/1.0.0": {
       "type": "project",
-      "path": "../SharedEntities/SharedEntities.csproj",
-      "msbuildProject": "../SharedEntities/SharedEntities.csproj"
+      "path": "../Shared/Shared.csproj",
+      "msbuildProject": "../Shared/Shared.csproj"
     },
-    "SharedServices/1.0.0": {
+    "SharedDataBase/1.0.0": {
       "type": "project",
-      "path": "../SharedServices/SharedServices.csproj",
-      "msbuildProject": "../SharedServices/SharedServices.csproj"
+      "path": "../SharedDataBase/SharedDataBase.csproj",
+      "msbuildProject": "../SharedDataBase/SharedDataBase.csproj"
     },
     "UesrServices/1.0.0": {
       "type": "project",

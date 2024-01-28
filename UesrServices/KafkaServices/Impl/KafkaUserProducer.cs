@@ -1,10 +1,11 @@
-﻿using KafkaServices.Impl;
+﻿using KafkaServices.Configs;
+using KafkaServices.Impl;
+using SharedEntities.Models.DTO.Request;
 using UesrServices.KafkaServices.Configs;
-using UesrServices.Models.Request;
 
 namespace UesrServices.KafkaServices.Impl;
 
 public class KafkaUserProducer : BaseKafkaProducer<UserRequestDto>, IKafkaUserProducer
 {
-    public KafkaUserProducer(KafkaUserProducerConfigs config) : base(config) { }
+    public KafkaUserProducer(KafkaUserProducerConfigs configs) : base(configs) { }
 }

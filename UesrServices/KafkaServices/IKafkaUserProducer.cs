@@ -1,6 +1,6 @@
 ﻿using KafkaServices;
-using UesrServices.Models.Request;
+using SharedEntities.Models.DTO.Request;
 
 namespace UesrServices.KafkaServices;
 
-public interface IKafkaUserProducer : IKafkaProducer<UserRequestDto> { } 
+public interface IKafkaUserProducer : IKafkaProducer<UserRequestDto> { }

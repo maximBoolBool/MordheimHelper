@@ -6,11 +6,11 @@ namespace RuleServices.Services.Impl;
 
 public class BandService : IBandService
 {
-    private readonly IRuleDatabase _db;
+    private readonly IRuleDatabaseWorker _db;
 
     private readonly IMapper _mapper;
 
-    public BandService(IRuleDatabase db, IMapper mapper)
+    public BandService(IRuleDatabaseWorker db, IMapper mapper)
     {
         _db = db;
         _mapper = mapper;

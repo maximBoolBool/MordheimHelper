@@ -10,7 +10,7 @@ using RuleEntities;
 
 namespace RuleEntities.Migrations
 {
-    [DbContext(typeof(RuleContext))]
+    [DbContext(typeof(RuleDbContext))]
     partial class RuleContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

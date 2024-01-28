@@ -2,9 +2,9 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MordheimHelper", "MordheimHelper\MordheimHelper.csproj", "{86415B73-1CD3-4E55-9973-D8B46FFB4A13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedEntities", "SharedEntities\SharedEntities.csproj", "{5F50CE0D-DEDE-4256-8937-F918DD2F79EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{5F50CE0D-DEDE-4256-8937-F918DD2F79EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedServices", "SharedServices\SharedServices.csproj", "{3DD2B700-C432-4F82-ABA3-7D6A3E50D3E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedDataBase", "SharedDataBase\SharedDataBase.csproj", "{3DD2B700-C432-4F82-ABA3-7D6A3E50D3E5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuleEntities", "RuleEntities\RuleEntities.csproj", "{0B778714-D726-4C8D-A0F2-FF4C4ACA6FC2}"
 EndProject

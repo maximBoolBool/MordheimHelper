@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using AutoMapper;
 using SharedEntities.Models;
-using UesrServices.Models.Request;
+using SharedEntities.Models.DTO.Request;
 using UserEntities.Entities;
 using UserEntities.Repositories;
 
@@ -10,9 +10,15 @@ namespace UesrServices.Impl;
 /// <inheritdoc cref="IUserService"/>
 public class UserService : IUserService
 {
+    #region Fields
+    
     private readonly IUserRepository _repository;
 
     private readonly IMapper _mapper;
+
+    #endregion
+
+    #region .ctor
 
     /// <summary>
     ///     .ctor
@@ -22,7 +28,11 @@ public class UserService : IUserService
         _repository = repository;
         _mapper = mapper;
     }
+
+    #endregion
     
+    #region Public methods
+
     /// <inheritdoc cref="IUserService"/>
     public async Task<bool> RegistrateUserAsync(UserRequestDto userRequest, CancellationToken cancellationToken)
     {
@@ -42,7 +52,6 @@ public class UserService : IUserService
     /// <inheritdoc cref="IUserService"/>
     public async Task<bool> UpdateUserAsync(UserRequestDto user, CancellationToken cancellationToken)
     {
-           
         return true;
     }
 
@@ -78,4 +87,6 @@ public class UserService : IUserService
     {
         throw new NotImplementedException();
     }
+
+    #endregion
 }

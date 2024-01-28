@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SharedServices.Repositories;
+using SharedServices.Repositories.Impl;
 using UserEntities.Entities;
 using UserEntities.Models;
 

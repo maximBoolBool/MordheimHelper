@@ -1,11 +1,11 @@
-﻿using KafkaServices.Impl;
-using Microsoft.Extensions.Logging;
+﻿using KafkaServices.Configs;
+using KafkaServices.Impl;
+using SharedEntities.Models.DTO.Response;
 using UesrServices.KafkaServices.Configs;
-using UesrServices.Models.Response;
 
 namespace UesrServices.KafkaServices.Impl;
 
-public class KafkaUserConsumer : BaseKafkaConsumer<UserResponseDto> , IKafkaUserConsumer
+public class KafkaUserConsumer : BaseKafkaConsumer<UserResponseDto>, IKafkaUserConsumer
 {
-    public KafkaUserConsumer(KafkaUserConsumerConfigs config, ILogger log) : base(config, log) { }
+    public KafkaUserConsumer(KafkaUserConsumerConfigs config) : base(config) { }
 }

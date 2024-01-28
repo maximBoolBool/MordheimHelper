@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SharedEntities.Models.DTO.Request;
 using UesrServices;
-using UesrServices.Models.Request;
+using UesrServices.KafkaServices;
 
 namespace UserService.Controllers;
 
@@ -10,13 +11,20 @@ namespace UserService.Controllers;
 [Route("api/users")]
 public class UserController : Controller
 {
+    #region Fields
+
     private readonly IUserService _userService;
 
+    private readonly IKafkaUserService _kafkaService;
+    
+    #endregion
+    
     #region .ctor
 
-    public UserController(IUserService userService)
+    public UserController(IUserService userService, IKafkaUserService kafkaService)
     {
         _userService = userService;
+        _kafkaService = kafkaService;
     }
 
     #endregion
@@ -37,7 +45,8 @@ public class UserController : Controller
     [HttpDelete("delete/{id:long}")]
     public async Task<IActionResult> Delete([FromQuery] long id,CancellationToken cancellationToken)
     {
-        await _userService.DeleteUserAsync(id, cancellationToken);
+        await _kafkaService.Producer.ProduceAsync(new UserRequestDto(), cancellationToken);
+        var response = _kafkaService.Consumer.Consume(cancellationToken);
         return Ok();
     }
 

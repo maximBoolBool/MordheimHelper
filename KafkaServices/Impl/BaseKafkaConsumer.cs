@@ -1,35 +1,51 @@
 ﻿using Confluent.Kafka;
 using KafkaServices.Configs;
-using Microsoft.Extensions.Logging;
+using KafkaServices.Helpers;
 
 namespace KafkaServices.Impl;
 
-/// <summary>
-///     Базовый потребитель сообщений из Kafka 
-/// </summary>
-public class BaseKafkaConsumer<TResponse> : IKafkaConsumer<TResponse>
+public class BaseKafkaConsumer<TResponse> : IKafkaConsumer<TResponse> where TResponse : class 
 {
     private readonly ConsumerConfig _config;
+    private readonly string _topicName;
 
-    private readonly ILogger _log;
-    
-    public BaseKafkaConsumer(IBaseKafkaConsumerConfigs config, ILogger log)
+    public BaseKafkaConsumer(IBaseKafkaConsumerConfigs config)
     {
         _config = new ConsumerConfig()
         {
-            BootstrapServers =  config.BootstrapServers,
+            BootstrapServers = config.BootstrapServers,
             GroupId = config.GroupId,
             AutoOffsetReset = AutoOffsetReset.Earliest,
-            EnableAutoCommit = false,
+            EnableAutoCommit = true, // Включение автоматической фиксации
         };
 
-        _log = log;
+        _topicName = config.Topic;
     } 
 
-    public async Task<TResponse> ConsumeAsync(CancellationToken cancellationToken)
+    public async Task<TResponse> Consume(CancellationToken cancellationToken)
     {
-        using var consumer = new ConsumerBuilder<Ignore, TResponse>(_config).Build();
-        var response = await Task.Run(() => consumer.Consume(cancellationToken), cancellationToken);
-        return response.Message.Value;
+        using var consumer = new ConsumerBuilder<Null, TResponse>(_config)
+            .SetKeyDeserializer(Deserializers.Null)
+            .SetValueDeserializer(new BaseClassDeserialization<TResponse>())
+            .Build();
+        
+        consumer.Subscribe(_topicName);
+
+        try
+        {
+            var consumeResult = consumer.Consume();
+            consumer.Commit(consumeResult); // Явная фиксация
+            return consumeResult.Message.Value;
+        }
+        catch (ConsumeException ex)
+        {
+            Console.WriteLine($"Error consuming message from Kafka: {ex.Error.Reason}");
+            throw;
+        }
+        finally
+        {
+            consumer.Close();
+        }
     }
+
 }

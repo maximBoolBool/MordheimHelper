@@ -3,7 +3,7 @@
 /// <summary>
 ///     Интерфейс
 /// </summary>
-public class IBaseKafkaConsumerConfigs
+public interface IBaseKafkaConsumerConfigs
 {
     /// <summary>
     ///     Строка подключения к кафке
@@ -18,5 +18,5 @@ public class IBaseKafkaConsumerConfigs
     /// <summary>
     ///     Название топика
     /// </summary>
-    public string TopicName { get; set; }
+    public string Topic { get; set; }
 }

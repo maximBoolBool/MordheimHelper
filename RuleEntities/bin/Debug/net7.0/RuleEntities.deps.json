@@ -11,7 +11,7 @@
           "Microsoft.EntityFrameworkCore.Design": "7.0.0",
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.0",
-          "SharedEntities": "1.0.0",
+          "Shared": "1.0.0",
           "SharedServices": "1.0.0"
         },
         "runtime": {
@@ -246,18 +246,18 @@
           "System.Text.Encodings.Web": "7.0.0"
         }
       },
-      "SharedEntities/1.0.0": {
+      "Shared/1.0.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
-          "SharedEntities.dll": {}
+          "Shared.dll": {}
         }
       },
       "SharedServices/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.0",
-          "SharedEntities": "1.0.0"
+          "Shared": "1.0.0"
         },
         "runtime": {
           "SharedServices.dll": {}
@@ -439,7 +439,7 @@
       "path": "system.text.json/7.0.0",
       "hashPath": "system.text.json.7.0.0.nupkg.sha512"
     },
-    "SharedEntities/1.0.0": {
+    "Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

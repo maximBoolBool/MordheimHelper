@@ -1,9 +1,7 @@
 C:\Users\petra\RiderProjects\MordheimHelper\RuleEntities\bin\Debug\net7.0\RuleEntities.deps.json
 C:\Users\petra\RiderProjects\MordheimHelper\RuleEntities\bin\Debug\net7.0\RuleEntities.dll
 C:\Users\petra\RiderProjects\MordheimHelper\RuleEntities\bin\Debug\net7.0\RuleEntities.pdb
-C:\Users\petra\RiderProjects\MordheimHelper\RuleEntities\bin\Debug\net7.0\SharedEntities.dll
 C:\Users\petra\RiderProjects\MordheimHelper\RuleEntities\bin\Debug\net7.0\SharedServices.dll
-C:\Users\petra\RiderProjects\MordheimHelper\RuleEntities\bin\Debug\net7.0\SharedEntities.pdb
 C:\Users\petra\RiderProjects\MordheimHelper\RuleEntities\bin\Debug\net7.0\SharedServices.pdb
 C:\Users\petra\RiderProjects\MordheimHelper\RuleEntities\obj\Debug\net7.0\RuleEntities.csproj.AssemblyReference.cache
 C:\Users\petra\RiderProjects\MordheimHelper\RuleEntities\obj\Debug\net7.0\RuleEntities.GeneratedMSBuildEditorConfig.editorconfig
@@ -17,3 +15,5 @@ C:\Users\petra\RiderProjects\MordheimHelper\RuleEntities\obj\Debug\net7.0\RuleEn
 C:\Users\petra\RiderProjects\MordheimHelper\RuleEntities\obj\Debug\net7.0\ref\RuleEntities.dll
 C:\Users\petra\RiderProjects\MordheimHelper\RuleEntities\bin\Debug\net7.0\RuleEntities.runtimeconfig.json
 C:\Users\petra\RiderProjects\MordheimHelper\RuleEntities\obj\Debug\net7.0\RuleEntities.genruntimeconfig.cache
+C:\Users\petra\RiderProjects\MordheimHelper\RuleEntities\bin\Debug\net7.0\Shared.dll
+C:\Users\petra\RiderProjects\MordheimHelper\RuleEntities\bin\Debug\net7.0\Shared.pdb

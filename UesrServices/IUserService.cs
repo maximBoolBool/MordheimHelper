@@ -1,5 +1,4 @@
-﻿using UesrServices.Models;
-using UesrServices.Models.Request;
+﻿using SharedEntities.Models.DTO.Request;
 
 namespace UesrServices;
 

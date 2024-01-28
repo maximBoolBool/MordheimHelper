@@ -2,4 +2,11 @@
 
 namespace UserService.Controllers;
 
-public class BandController : Controller { }
+public class BandController : Controller
+{
+    #region Fields
+
+    
+
+    #endregion
+}

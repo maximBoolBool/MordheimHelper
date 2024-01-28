@@ -1,6 +1,7 @@
 ﻿using KafkaServices;
-using UesrServices.Models.Request;
-using UesrServices.Models.Response;
+using KafkaServices.Impl;
+using SharedEntities.Models.DTO.Request;
+using SharedEntities.Models.DTO.Response;
 
 namespace UesrServices.KafkaServices;
 

@@ -13,5 +13,6 @@ public static class ServicesExtension
         services.AddScoped<IBandRepository, BandRepository>();
         services.AddScoped<IUnitRepository, UnitRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IUserDbWorker, UserDbWorker>();
     }
 }

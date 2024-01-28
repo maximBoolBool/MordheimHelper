@@ -11,8 +11,8 @@ builder.Services.AddDbContext<UserDbContext>
 
 var configs = builder.Configuration;
 
-builder.Services.AddUserServices(configs);
 builder.Services.AddUserRepositories();
+builder.Services.AddUserServices(configs);
 builder.Services.AddControllers();
 
 var app = builder.Build();

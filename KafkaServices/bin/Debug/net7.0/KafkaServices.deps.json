@@ -10,7 +10,8 @@
         "dependencies": {
           "Confluent.Kafka": "2.3.0",
           "Microsoft.Extensions.Logging.Console": "7.0.0",
-          "SharedEntities": "1.0.0"
+          "Shared": "1.0.0",
+          "Microsoft.Extensions.Hosting.Abstractions": "7.0.0.0"
         },
         "runtime": {
           "KafkaServices.dll": {}
@@ -316,12 +317,28 @@
           "System.Text.Encodings.Web": "7.0.0"
         }
       },
-      "SharedEntities/1.0.0": {
+      "Shared/1.0.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
-          "SharedEntities.dll": {}
+          "Shared.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Hosting.Abstractions/7.0.0.0": {
+        "runtime": {
+          "Microsoft.Extensions.Hosting.Abstractions.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
+          }
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Abstractions/7.0.0.0": {
+        "runtime": {
+          "Microsoft.Extensions.FileProviders.Abstractions.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
+          }
         }
       }
     }
@@ -458,8 +475,18 @@
       "path": "system.text.json/7.0.0",
       "hashPath": "system.text.json.7.0.0.nupkg.sha512"
     },
-    "SharedEntities/1.0.0": {
+    "Shared/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.Hosting.Abstractions/7.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.FileProviders.Abstractions/7.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

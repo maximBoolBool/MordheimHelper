@@ -1,0 +1,15 @@
+C:\Users\petra\RiderProjects\MordheimHelper\SharedServices\bin\Debug\net7.0\SharedServices.deps.json
+C:\Users\petra\RiderProjects\MordheimHelper\SharedServices\bin\Debug\net7.0\SharedServices.dll
+C:\Users\petra\RiderProjects\MordheimHelper\SharedServices\bin\Debug\net7.0\SharedServices.pdb
+C:\Users\petra\RiderProjects\MordheimHelper\SharedServices\obj\Debug\net7.0\SharedServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\petra\RiderProjects\MordheimHelper\SharedServices\obj\Debug\net7.0\SharedServices.AssemblyInfoInputs.cache
+C:\Users\petra\RiderProjects\MordheimHelper\SharedServices\obj\Debug\net7.0\SharedServices.AssemblyInfo.cs
+C:\Users\petra\RiderProjects\MordheimHelper\SharedServices\obj\Debug\net7.0\SharedServices.csproj.CoreCompileInputs.cache
+C:\Users\petra\RiderProjects\MordheimHelper\SharedServices\obj\Debug\net7.0\SharedServices.dll
+C:\Users\petra\RiderProjects\MordheimHelper\SharedServices\obj\Debug\net7.0\refint\SharedServices.dll
+C:\Users\petra\RiderProjects\MordheimHelper\SharedServices\obj\Debug\net7.0\SharedServices.pdb
+C:\Users\petra\RiderProjects\MordheimHelper\SharedServices\obj\Debug\net7.0\ref\SharedServices.dll
+C:\Users\petra\RiderProjects\MordheimHelper\SharedServices\obj\Debug\net7.0\SharedServices.csproj.AssemblyReference.cache
+C:\Users\petra\RiderProjects\MordheimHelper\SharedServices\obj\Debug\net7.0\SharedServices.csproj.CopyComplete
+C:\Users\petra\RiderProjects\MordheimHelper\SharedServices\bin\Debug\net7.0\Shared.dll
+C:\Users\petra\RiderProjects\MordheimHelper\SharedServices\bin\Debug\net7.0\Shared.pdb

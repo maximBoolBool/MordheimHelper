@@ -2,13 +2,11 @@ C:\Users\petra\RiderProjects\MordheimHelper\UesrServices\bin\Debug\net7.0\UesrSe
 C:\Users\petra\RiderProjects\MordheimHelper\UesrServices\bin\Debug\net7.0\UesrServices.dll
 C:\Users\petra\RiderProjects\MordheimHelper\UesrServices\bin\Debug\net7.0\UesrServices.pdb
 C:\Users\petra\RiderProjects\MordheimHelper\UesrServices\bin\Debug\net7.0\KafkaServices.dll
-C:\Users\petra\RiderProjects\MordheimHelper\UesrServices\bin\Debug\net7.0\SharedEntities.dll
 C:\Users\petra\RiderProjects\MordheimHelper\UesrServices\bin\Debug\net7.0\SharedServices.dll
 C:\Users\petra\RiderProjects\MordheimHelper\UesrServices\bin\Debug\net7.0\UserEntities.dll
 C:\Users\petra\RiderProjects\MordheimHelper\UesrServices\bin\Debug\net7.0\KafkaServices.pdb
 C:\Users\petra\RiderProjects\MordheimHelper\UesrServices\bin\Debug\net7.0\SharedServices.pdb
 C:\Users\petra\RiderProjects\MordheimHelper\UesrServices\bin\Debug\net7.0\UserEntities.pdb
-C:\Users\petra\RiderProjects\MordheimHelper\UesrServices\bin\Debug\net7.0\SharedEntities.pdb
 C:\Users\petra\RiderProjects\MordheimHelper\UesrServices\obj\Debug\net7.0\UesrServices.csproj.AssemblyReference.cache
 C:\Users\petra\RiderProjects\MordheimHelper\UesrServices\obj\Debug\net7.0\UesrServices.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\petra\RiderProjects\MordheimHelper\UesrServices\obj\Debug\net7.0\UesrServices.AssemblyInfoInputs.cache
@@ -19,3 +17,5 @@ C:\Users\petra\RiderProjects\MordheimHelper\UesrServices\obj\Debug\net7.0\UesrSe
 C:\Users\petra\RiderProjects\MordheimHelper\UesrServices\obj\Debug\net7.0\refint\UesrServices.dll
 C:\Users\petra\RiderProjects\MordheimHelper\UesrServices\obj\Debug\net7.0\UesrServices.pdb
 C:\Users\petra\RiderProjects\MordheimHelper\UesrServices\obj\Debug\net7.0\ref\UesrServices.dll
+C:\Users\petra\RiderProjects\MordheimHelper\UesrServices\bin\Debug\net7.0\Shared.dll
+C:\Users\petra\RiderProjects\MordheimHelper\UesrServices\bin\Debug\net7.0\Shared.pdb
