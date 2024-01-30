@@ -5,7 +5,7 @@ namespace RuleEntities.Repositories;
 /// <summary>
 ///     Бд для работы с 
 /// </summary>
-public interface IRuleDatabaseWorker : IDisposable, IDatabase
+public interface IRuleDatabaseWorker : IDisposable, IDatabaseWorker
 {
     public IArmorRepository Armors { get; }
     

@@ -14,5 +14,6 @@ public static class ServicesExtension
         services.AddScoped<IUnitRepository, UnitRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IUserDbWorker, UserDbWorker>();
+        services.AddScoped<IUserDbWorkerFactory, UserDbWorkerFactory>();
     }
 }

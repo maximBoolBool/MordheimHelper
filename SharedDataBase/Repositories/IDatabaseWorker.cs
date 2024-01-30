@@ -1,3 +1,3 @@
 ﻿namespace SharedServices.Repositories;
 
-public interface IDatabase { }
+public interface IDatabaseWorker { }

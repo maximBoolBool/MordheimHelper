@@ -3,7 +3,7 @@ using UserEntities.Repositories.Impl;
 
 namespace UserEntities.Repositories;
 
-public interface IUserDbWorker : IDisposable, IDatabase
+public interface IUserDbWorker : IDisposable, IDatabaseWorker
 {
     public IBandRepository Bands { get; }
     

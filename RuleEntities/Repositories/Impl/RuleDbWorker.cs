@@ -1,10 +1,10 @@
 ﻿namespace RuleEntities.Repositories.Impl;
 
-public class RuleDatabaseWorker : IRuleDatabaseWorker
+public class RuleDbWorker : IRuleDatabaseWorker
 {
-    private readonly RuleDatabaseWorker _dbcontext;
+    private readonly RuleDbWorker _dbcontext;
     
-    public RuleDatabaseWorker(
+    public RuleDbWorker(
         IUnitRepository units,
         IBandRepository bands,
         IArmorRepository armors,

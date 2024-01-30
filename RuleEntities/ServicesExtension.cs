@@ -20,6 +20,7 @@ public static class ServicesExtension
         services.AddScoped<IRangeWeaponRepository, RangeWeaponRepository>();
         services.AddScoped<IWeaponSpecialRuleRepository, WeaponSpecialRuleRepository>();
         services.AddScoped<IUnitRepository, UnitRepository>();
-        services.AddScoped<IRuleDatabaseWorker, RuleDatabaseWorker>();
+        services.AddScoped<IRuleDatabaseWorker, RuleDbWorker>();
+        services.AddScoped<IRuleDbWorkerFactory, RuleDbWorkerFactory>();
     }
 }
