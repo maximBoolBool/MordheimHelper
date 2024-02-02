@@ -2,9 +2,7 @@ C:\Users\petra\RiderProjects\MordheimHelper\RuleServices\bin\Debug\net7.0\RuleSe
 C:\Users\petra\RiderProjects\MordheimHelper\RuleServices\bin\Debug\net7.0\RuleServices.dll
 C:\Users\petra\RiderProjects\MordheimHelper\RuleServices\bin\Debug\net7.0\RuleServices.pdb
 C:\Users\petra\RiderProjects\MordheimHelper\RuleServices\bin\Debug\net7.0\RuleEntities.dll
-C:\Users\petra\RiderProjects\MordheimHelper\RuleServices\bin\Debug\net7.0\SharedServices.dll
 C:\Users\petra\RiderProjects\MordheimHelper\RuleServices\bin\Debug\net7.0\RuleEntities.pdb
-C:\Users\petra\RiderProjects\MordheimHelper\RuleServices\bin\Debug\net7.0\SharedServices.pdb
 C:\Users\petra\RiderProjects\MordheimHelper\RuleServices\obj\Debug\net7.0\RuleServices.csproj.AssemblyReference.cache
 C:\Users\petra\RiderProjects\MordheimHelper\RuleServices\obj\Debug\net7.0\RuleServices.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\petra\RiderProjects\MordheimHelper\RuleServices\obj\Debug\net7.0\RuleServices.AssemblyInfoInputs.cache
@@ -21,3 +19,5 @@ C:\Users\petra\RiderProjects\MordheimHelper\RuleServices\bin\Debug\net7.0\KafkaS
 C:\Users\petra\RiderProjects\MordheimHelper\RuleServices\bin\Debug\net7.0\Shared.pdb
 C:\Users\petra\RiderProjects\MordheimHelper\RuleServices\bin\Debug\net7.0\Microsoft.Extensions.Hosting.Abstractions.dll
 C:\Users\petra\RiderProjects\MordheimHelper\RuleServices\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\petra\RiderProjects\MordheimHelper\RuleServices\bin\Debug\net7.0\SharedDataBase.dll
+C:\Users\petra\RiderProjects\MordheimHelper\RuleServices\bin\Debug\net7.0\SharedDataBase.pdb

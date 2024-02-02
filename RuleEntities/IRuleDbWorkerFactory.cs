@@ -1,6 +1,7 @@
-﻿using RuleEntities.Repositories.Impl;
+﻿using RuleEntities.Repositories;
+using RuleEntities.Repositories.Impl;
 using SharedServices.Repositories;
 
 namespace RuleEntities;
 
-public interface IRuleDbWorkerFactory : IDbWorkerFactory<RuleDbWorker> { }
+public interface IRuleDbWorkerFactory : IDbWorkerFactory<IRuleDbWorker> { }

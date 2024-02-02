@@ -27,15 +27,4 @@ public class RuleDbContext : DbContext
     public DbSet<UnitEntity> Units { get; set; } = null!;
     
     #endregion
-
-    #region Overrides
-    
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        Database.Migrate();
-        base.OnConfiguring(optionsBuilder);
-    }
-    
-    #endregion
-
 }

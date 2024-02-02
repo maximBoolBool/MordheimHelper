@@ -1,4 +1,6 @@
-﻿namespace SharedEntities;
+﻿using System.Runtime.Serialization;
+
+namespace SharedEntities;
 
 /// <summary>
 ///     Тип модели
@@ -8,15 +10,15 @@ public enum ModelType
     /// <summary>
     ///     Рядовой
     /// </summary>
-    Common,
+    Common = 0,
     
     /// <summary>
     ///     Персонаж
     /// </summary>
-    Character,
+    Character = 1,
     
     /// <summary>
     ///     Лидер отряда
     /// </summary>
-    Leader,
+    Leader = 2,
 }

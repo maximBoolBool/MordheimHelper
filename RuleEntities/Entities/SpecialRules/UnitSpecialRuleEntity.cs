@@ -18,5 +18,5 @@ public class UnitSpecialRuleEntity : BaseRuleEntity
     /// <summary>
     ///     Навигационное свойство
     /// </summary>
-    public UnitEntity Unit { get; set; }
+    public List<UnitEntity> Unit { get; set; }
 }

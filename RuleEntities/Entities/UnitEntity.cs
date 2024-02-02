@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using RuleEntities.Entities.SpecialRules;
 using SharedEntities.Entities;
 
 namespace RuleEntities.Entities;
@@ -106,4 +107,14 @@ public class UnitEntity : BaseEntity
     ///     Доступное оружие ближнего боя
     /// </summary>
     public List<CloseCombatWeaponEntity> CloseCombatWeapons { get; set; }
+    
+    /// <summary>
+    ///     Доступное оружие дальнего боя
+    /// </summary>
+    public List<RangeWeaponEntity> RangeWeapons { get; set; }
+    
+    /// <summary>
+    ///     Спец правила отряда
+    /// </summary>
+    public List<UnitSpecialRuleEntity> Rules { get; set; }
 }

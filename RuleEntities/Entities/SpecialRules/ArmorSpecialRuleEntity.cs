@@ -18,5 +18,5 @@ public class ArmorSpecialRuleEntity : BaseRuleEntity
     /// <summary>
     ///     Навигационное свойство
     /// </summary>
-    public ArmorEntity Armor { get; set; }
+    public List<ArmorEntity> Armor { get; set; }
 }

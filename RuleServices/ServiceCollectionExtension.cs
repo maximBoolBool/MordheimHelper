@@ -28,10 +28,16 @@ public static class ServiceCollectionExtension
             Topic = "unit-response-topic"
         });
         
+        services.AddScoped<IArmorService, ArmorService>();
+        services.AddScoped<ICloseCombatWeaponService, CloseCombatWeaponService>();
+        services.AddScoped<IRangeWeaponService, RangeWeaponService>();
+        services.AddScoped<IUnitService, UnitService>();
+        services.AddScoped<IBandService, BandService>();
+        
         services.AddScoped<IKafkaUnitConsumer, KafkaUnitConsumer>();
         services.AddScoped<IKafkaUnitProducer, KafkaUnitProducer>();
         services.AddScoped<IKafkaUnitService, KafkaUnitService>();
-        services.AddScoped<IBandService, BandService>();
+        
         services.AddHostedService<UnitsBackgroundService>();
     }
 }

@@ -23,7 +23,7 @@ public class ArmorEntity : BaseEntity
     public string Description { get; set; }
     
     /// <summary>
-    ///     Отряда которым доступна броня
+    ///     Отряды которым доступна броня
     /// </summary>
     public List<UnitEntity> Units { get; set; }
 

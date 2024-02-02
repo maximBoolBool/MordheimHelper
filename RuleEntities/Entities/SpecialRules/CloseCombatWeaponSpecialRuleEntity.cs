@@ -18,5 +18,5 @@ public class CloseCombatWeaponSpecialRuleEntity : BaseRuleEntity
     /// <summary>
     ///     Навигационное свойство
     /// </summary>
-    public CloseCombatWeaponEntity Weapon { get; set; }
+    public List<CloseCombatWeaponEntity> Weapon { get; set; }
 }

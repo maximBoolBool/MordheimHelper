@@ -1,33 +1,46 @@
 ﻿using AutoMapper;
-using RuleEntities.Repositories;
+using Microsoft.EntityFrameworkCore;
+using RuleEntities;
 using RuleServices.Models;
+using RuleServices.Models.Dto;
 
 namespace RuleServices.Services.Impl;
 
-public class BandService : IBandService
+internal class BandService : IBandService
 {
-    private readonly IRuleDatabaseWorker _db;
+    #region Fields
+
+    private readonly IRuleDbWorkerFactory _dbWorkerFactory;
 
     private readonly IMapper _mapper;
 
-    public BandService(IRuleDatabaseWorker db, IMapper mapper)
+    #endregion
+
+    #region .ctor
+    
+    public BandService(IRuleDbWorkerFactory dbWorkerFactory, IMapper mapper)
     {
-        _db = db;
+        _dbWorkerFactory = dbWorkerFactory;
         _mapper = mapper;
     }
 
-    public async Task<BandModel[]> ListAsync(CancellationToken cancellationToken)
-    {
-        var entities = await _db.Bands.ListAsync();
-        var response = _mapper.Map<BandModel[]>(entities);
-        return response;
-    }
+    #endregion
+    
+    #region Public methods
 
-    public async Task<BandModel> GetAsync(long id, CancellationToken cancellationToken)
+    public async Task<BandModel[]> ListAsync(BandListQuery query, CancellationToken cancellationToken)
     {
-        var entity = await _db.Bands.FindById(id, cancellationToken);
-        var response = _mapper.Map<BandModel>(entity);
-        return response;
+        using var db = _dbWorkerFactory.CreateScopeDatabase();
+        var entities = await db.Bands.CreateQuery().ToArrayAsync(cancellationToken);
+        return _mapper.Map<BandModel[]>(entities);
     }
     
+    public async Task<BandModel> GetAsync(long id, CancellationToken cancellationToken)
+    {
+        using var db = _dbWorkerFactory.CreateScopeDatabase();
+        var entities = await db.Bands.FindById(id, cancellationToken);
+        return _mapper.Map<BandModel>(entities);
+    }
+
+    #endregion
 }

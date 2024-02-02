@@ -4,7 +4,7 @@ using SharedEntities.Models.DTO.Response;
 
 namespace RuleServices.Kafka.Impl;
 
-public class KafkaUnitService : BaseKafkaService<UnitResponse, UnitRequest> , IKafkaUnitService
+internal class KafkaUnitService : BaseKafkaService<UnitResponse, UnitRequest> , IKafkaUnitService
 {
     public KafkaUnitService(
         IKafkaUnitConsumer consumer,

@@ -1,0 +1,15 @@
+C:\Users\petra\RiderProjects\MordheimHelper\SharedDataBase\bin\Debug\net7.0\SharedDataBase.deps.json
+C:\Users\petra\RiderProjects\MordheimHelper\SharedDataBase\bin\Debug\net7.0\SharedDataBase.dll
+C:\Users\petra\RiderProjects\MordheimHelper\SharedDataBase\bin\Debug\net7.0\SharedDataBase.pdb
+C:\Users\petra\RiderProjects\MordheimHelper\SharedDataBase\bin\Debug\net7.0\Shared.dll
+C:\Users\petra\RiderProjects\MordheimHelper\SharedDataBase\bin\Debug\net7.0\Shared.pdb
+C:\Users\petra\RiderProjects\MordheimHelper\SharedDataBase\obj\Debug\net7.0\SharedDataBase.csproj.AssemblyReference.cache
+C:\Users\petra\RiderProjects\MordheimHelper\SharedDataBase\obj\Debug\net7.0\SharedDataBase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\petra\RiderProjects\MordheimHelper\SharedDataBase\obj\Debug\net7.0\SharedDataBase.AssemblyInfoInputs.cache
+C:\Users\petra\RiderProjects\MordheimHelper\SharedDataBase\obj\Debug\net7.0\SharedDataBase.AssemblyInfo.cs
+C:\Users\petra\RiderProjects\MordheimHelper\SharedDataBase\obj\Debug\net7.0\SharedDataBase.csproj.CoreCompileInputs.cache
+C:\Users\petra\RiderProjects\MordheimHelper\SharedDataBase\obj\Debug\net7.0\SharedDataBase.csproj.CopyComplete
+C:\Users\petra\RiderProjects\MordheimHelper\SharedDataBase\obj\Debug\net7.0\SharedDataBase.dll
+C:\Users\petra\RiderProjects\MordheimHelper\SharedDataBase\obj\Debug\net7.0\refint\SharedDataBase.dll
+C:\Users\petra\RiderProjects\MordheimHelper\SharedDataBase\obj\Debug\net7.0\SharedDataBase.pdb
+C:\Users\petra\RiderProjects\MordheimHelper\SharedDataBase\obj\Debug\net7.0\ref\SharedDataBase.dll

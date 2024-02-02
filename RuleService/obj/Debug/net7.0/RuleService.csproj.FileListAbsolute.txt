@@ -12,10 +12,8 @@ C:\Users\petra\RiderProjects\MordheimHelper\RuleService\bin\Debug\net7.0\Microso
 C:\Users\petra\RiderProjects\MordheimHelper\RuleService\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\petra\RiderProjects\MordheimHelper\RuleService\bin\Debug\net7.0\RuleEntities.dll
 C:\Users\petra\RiderProjects\MordheimHelper\RuleService\bin\Debug\net7.0\RuleServices.dll
-C:\Users\petra\RiderProjects\MordheimHelper\RuleService\bin\Debug\net7.0\SharedServices.dll
 C:\Users\petra\RiderProjects\MordheimHelper\RuleService\bin\Debug\net7.0\RuleServices.pdb
 C:\Users\petra\RiderProjects\MordheimHelper\RuleService\bin\Debug\net7.0\RuleEntities.pdb
-C:\Users\petra\RiderProjects\MordheimHelper\RuleService\bin\Debug\net7.0\SharedServices.pdb
 C:\Users\petra\RiderProjects\MordheimHelper\RuleService\obj\Debug\net7.0\RuleService.csproj.AssemblyReference.cache
 C:\Users\petra\RiderProjects\MordheimHelper\RuleService\obj\Debug\net7.0\RuleService.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\petra\RiderProjects\MordheimHelper\RuleService\obj\Debug\net7.0\RuleService.AssemblyInfoInputs.cache
@@ -72,3 +70,5 @@ C:\Users\petra\RiderProjects\MordheimHelper\RuleService\bin\Debug\net7.0\KafkaSe
 C:\Users\petra\RiderProjects\MordheimHelper\RuleService\bin\Debug\net7.0\Shared.dll
 C:\Users\petra\RiderProjects\MordheimHelper\RuleService\bin\Debug\net7.0\KafkaServices.pdb
 C:\Users\petra\RiderProjects\MordheimHelper\RuleService\bin\Debug\net7.0\Shared.pdb
+C:\Users\petra\RiderProjects\MordheimHelper\RuleService\bin\Debug\net7.0\SharedDataBase.dll
+C:\Users\petra\RiderProjects\MordheimHelper\RuleService\bin\Debug\net7.0\SharedDataBase.pdb

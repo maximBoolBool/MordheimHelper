@@ -1,10 +1,11 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using RuleEntities.Repositories;
 using RuleEntities.Repositories.Impl;
 using SharedServices.Repositories.Impl;
 
 namespace RuleEntities;
 
-public class RuleDbWorkerFactory : BaseDbWorkerFactory<RuleDbWorker>, IRuleDbWorkerFactory
+public class RuleDbWorkerFactory : BaseDbWorkerFactory<IRuleDbWorker>, IRuleDbWorkerFactory
 {
-    public RuleDbWorkerFactory(IServiceScope scopeFactory) : base(scopeFactory) { }
+    public RuleDbWorkerFactory(IServiceScopeFactory scopeFactory) : base(scopeFactory) { }
 }

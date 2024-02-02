@@ -2,7 +2,7 @@
 
 public class UserDbWorker : IUserDbWorker
 {
-    private UserDbContext _dbContext;
+    private readonly UserDbContext _dbContext;
     
     public UserDbWorker(
         IBandRepository bands,

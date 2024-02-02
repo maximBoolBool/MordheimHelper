@@ -20,7 +20,7 @@ public class UnitsBackgroundService : IHostedService
         while (!cancellationToken.IsCancellationRequested)
         {
             var unitConsumer = scoped.ServiceProvider.GetRequiredService<IKafkaUnitConsumer>();
-            var k =unitConsumer.Consume(cancellationToken);
+            var k = unitConsumer.Consume(cancellationToken);
         }
     }
 

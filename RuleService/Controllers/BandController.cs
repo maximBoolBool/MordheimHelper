@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RuleServices.Models.Dto;
 using RuleServices.Services;
 
 namespace RuleService.Controllers;
@@ -29,9 +30,9 @@ public class BandController : Controller
     /// <summary>
     ///     Получить лист банд
     /// </summary>
-    public async Task<IActionResult> List(CancellationToken cancellationToken)
+    public async Task<IActionResult> List([FromBody]BandListQuery query,CancellationToken cancellationToken)
     {
-        var response = await _bandService.ListAsync(cancellationToken);
+        var response = await _bandService.ListAsync(query, cancellationToken);
         return Ok(response);
     }
     

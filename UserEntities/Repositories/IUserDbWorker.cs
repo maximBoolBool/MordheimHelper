@@ -1,9 +1,8 @@
 ﻿using SharedServices.Repositories;
-using UserEntities.Repositories.Impl;
 
 namespace UserEntities.Repositories;
 
-public interface IUserDbWorker : IDisposable, IDatabaseWorker
+public interface IUserDbWorker : IDisposable, IDbWorker
 {
     public IBandRepository Bands { get; }
     

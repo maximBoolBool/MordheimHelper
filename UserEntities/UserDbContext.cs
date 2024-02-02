@@ -28,7 +28,7 @@ public class UserDbContext : DbContext
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        Database.Migrate();
+        optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=userDb;Username=postgres;Password=panzer117");
         base.OnConfiguring(optionsBuilder);
     }
     

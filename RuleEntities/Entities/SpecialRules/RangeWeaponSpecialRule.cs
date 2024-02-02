@@ -18,5 +18,5 @@ public class RangeWeaponSpecialRule : BaseRuleEntity
     /// <summary>
     ///     Навигационное свойство
     /// </summary>
-    public RangeWeaponEntity Weapon { get; set; }
+    public List<RangeWeaponEntity> Weapon { get; set; }
 }

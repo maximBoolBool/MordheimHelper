@@ -1,6 +1,6 @@
 ﻿namespace RuleEntities.Repositories.Impl;
 
-public class RuleDbWorker : IRuleDatabaseWorker
+internal class RuleDbWorker : IRuleDbWorker
 {
     private readonly RuleDbWorker _dbcontext;
     

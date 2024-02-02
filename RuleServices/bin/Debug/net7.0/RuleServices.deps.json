@@ -446,7 +446,7 @@
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.0",
           "Shared": "1.0.0",
-          "SharedServices": "1.0.0"
+          "SharedDataBase": "1.0.0"
         },
         "runtime": {
           "RuleEntities.dll": {}
@@ -460,13 +460,13 @@
           "Shared.dll": {}
         }
       },
-      "SharedServices/1.0.0": {
+      "SharedDataBase/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.0",
           "Shared": "1.0.0"
         },
         "runtime": {
-          "SharedServices.dll": {}
+          "SharedDataBase.dll": {}
         }
       },
       "Microsoft.Extensions.Hosting.Abstractions/7.0.0.0": {
@@ -718,7 +718,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "SharedServices/1.0.0": {
+    "SharedDataBase/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

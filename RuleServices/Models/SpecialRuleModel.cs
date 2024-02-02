@@ -2,7 +2,7 @@
 
 namespace RuleServices.Models;
 
-public class SpecialRuleModel
+public abstract class SpecialRuleModel
 {
     [JsonProperty("id")]
     public long Id { get; set; }

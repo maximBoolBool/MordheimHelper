@@ -60,9 +60,9 @@ public abstract class BaseRepositiry<TEntity, TFilter> : IRepository<TEntity, TF
     }
 
     /// <inheritdoc cref="IRepository{T}"/>
-    public virtual async Task<TEntity[]> ListAsync()
+    public virtual async Task<TEntity[]> ListAsync(CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        return await _dbSet.ToArrayAsync(cancellationToken);
     }
 
     /// <inheritdoc cref="IRepository{T}"/>

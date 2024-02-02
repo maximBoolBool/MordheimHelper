@@ -6,7 +6,7 @@
 /// <typeparam name="TResponse"></typeparam>
 public interface IRepository<TResponse, TFilter>
 {
-    public Task<TResponse[]> ListAsync();
+    public Task<TResponse[]> ListAsync(CancellationToken cancellationToken);
 
     /// <summary>
     ///     Сохрагить изменения
