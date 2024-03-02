@@ -26,3 +26,5 @@ _ReSharper*/
 
 # Игнорировать файлы настроек проекта Xamarin
 *.userprefs
+*.pdb
+*.cache
