@@ -8,8 +8,20 @@ public class RuleDbContext : DbContext
 {
     #region .ctor
 
+    public RuleDbContext() : base() { }
+
     public RuleDbContext(DbContextOptions<RuleDbContext> options) : base(options) { }
     
+    #endregion
+
+    #region Ovverides
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=rule_db;Username=postgres;Password=panzer117");
+        base.OnConfiguring(optionsBuilder);
+    }    
+
     #endregion
     
     #region Tables

@@ -10,6 +10,8 @@ public class UserDbContext : DbContext
 {
     #region .ctor
     
+    public UserDbContext() : base() { }
+    
     public UserDbContext(DbContextOptions<UserDbContext> options) : base(options) { }
     
     #endregion
