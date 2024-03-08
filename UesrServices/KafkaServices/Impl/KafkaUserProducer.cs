@@ -5,7 +5,7 @@ using UesrServices.KafkaServices.Configs;
 
 namespace UesrServices.KafkaServices.Impl;
 
-public class KafkaUserProducer : BaseKafkaProducer<UserRequestDto>, IKafkaUserProducer
+public class KafkaUserProducer : BaseKafkaProducer<UserQueryDto>, IKafkaUserProducer
 {
     public KafkaUserProducer(KafkaUserProducerConfigs configs) : base(configs) { }
 }

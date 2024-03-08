@@ -37,7 +37,7 @@ public class UnitEntity : BaseEntity
     public int Move { get; set; }
     
     /// <summary>
-    ///     Умение 
+    ///     Умение ближнего боя
     /// </summary>
     [Column("weapon_skill")]
     public int WeaponSkill { get; set; }

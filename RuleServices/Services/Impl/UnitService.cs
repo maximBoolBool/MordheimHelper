@@ -38,7 +38,7 @@ internal class UnitService : IUnitService
         using var db = _dbWorkerFactory.CreateScopeDatabase();
 
         var querieable = db.Units.CreateQuery();
-        querieable = FilterHelpers<UnitEntity, long>.Eq(querieable, u => u.BandId, query.BandId);
+        querieable = FilterHelpers.Eq(querieable, u => u.BandId, query.BandId);
         var entities = await querieable.ToArrayAsync(cancellationToken);
 
         return _mapper.Map<UnitResponse[]>(entities);

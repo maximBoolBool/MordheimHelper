@@ -4,7 +4,7 @@ using SharedEntities.Models.DTO.Response;
 
 namespace UesrServices.KafkaServices.Impl;
 
-public class KafkaUserService : BaseKafkaService<UserRequestDto, UserResponseDto> , IKafkaUserService
+public class KafkaUserService : BaseKafkaService<UserQueryDto, UserResponseDto> , IKafkaUserService
 {
     public KafkaUserService(
         IKafkaUserConsumer consumer, 

@@ -8,7 +8,7 @@ public class UserServiceMapperProfile : Profile
 {
     public UserServiceMapperProfile()
     {
-        CreateMap<UserRequestDto, UserEntity>()
+        CreateMap<UserQueryDto, UserEntity>()
             .ForMember( entity => entity.Login, opt => opt.MapFrom( src => src.Login ))
             .ForMember(entity => entity.Password, opt => opt.MapFrom( src => src.Password ));
 

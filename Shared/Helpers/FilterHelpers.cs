@@ -2,9 +2,12 @@
 
 namespace SharedEntities.Helpers;
 
-public static class FilterHelpers<T,TValue>
+public static class FilterHelpers
 {
-    public static IQueryable<T> Eq(IQueryable<T> query, Expression<Func<T,TValue>> expression, TValue? filter)
+    public static IQueryable<T> Eq<T, TValue>(
+        IQueryable<T> query,
+        Expression<Func<T,TValue>> expression,
+        TValue? filter)
     {
         if (filter == null)
             return query;
@@ -18,7 +21,10 @@ public static class FilterHelpers<T,TValue>
         return query.Where(lambda);
     }
 
-    public static IQueryable<T> Sm(IQueryable<T> query, Expression<Func<T,TValue>> expression, TValue? filter)
+    public static IQueryable<T> Sm<T, TValue>(
+        IQueryable<T> query,
+        Expression<Func<T,TValue>>
+            expression, TValue? filter)
     {
         if (filter == null)
             return query;
@@ -32,7 +38,10 @@ public static class FilterHelpers<T,TValue>
         return query.Where(lambda);
     }
 
-    public static IQueryable<T> Gr(IQueryable<T> query, Expression<Func<T,TValue>> expression, TValue? filter)
+    public static IQueryable<T> Gr<T, TValue>(
+        IQueryable<T> query,
+        Expression<Func<T,TValue>> expression,
+        TValue? filter)
     {
         if (filter == null)
             return query;
@@ -46,7 +55,10 @@ public static class FilterHelpers<T,TValue>
         return query.Where(lambda);
     }
 
-    public static IQueryable<T> GrOrEq(IQueryable<T> query, Expression<Func<T, TValue>> expression, TValue filter)
+    public static IQueryable<T> GrOrEq<T, TValue>(
+        IQueryable<T> query,
+        Expression<Func<T, TValue>> expression,
+        TValue filter)
     {
         if (filter == null)
             return query;
@@ -60,7 +72,11 @@ public static class FilterHelpers<T,TValue>
         return query.Where(lambda);
     }
     
-    public static IQueryable<T> SmOrEq(IQueryable<T> query, Expression<Func<T, TValue>> expression, TValue filter)
+    public static IQueryable<T> SmOrEq<T, TValue>(
+        IQueryable<T> query,
+        Expression<Func<T,
+        TValue>> expression,
+        TValue filter)
     {
         if (filter == null)
             return query;

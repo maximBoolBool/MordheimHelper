@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using RuleEntities;
-using RuleService;
 using RuleServices;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,7 +14,6 @@ builder.Services.AddControllers();
 
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
 app.MapControllers();
 
 await app.RunAsync();

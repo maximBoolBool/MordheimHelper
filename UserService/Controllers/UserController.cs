@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SharedEntities.Models.DTO.Request;
-using UesrServices;
-using UesrServices.KafkaServices;
+using UesrServices.Services;
+using UserService.Services;
 
 namespace UserService.Controllers;
 
@@ -14,27 +14,41 @@ public class UserController : Controller
     #region Fields
 
     private readonly IUserService _userService;
-
-    private readonly IKafkaUserService _kafkaService;
-    
+    private readonly IJWTService _jwtService;
+        
     #endregion
     
     #region .ctor
 
-    public UserController(IUserService userService, IKafkaUserService kafkaService)
+    public UserController(IUserService userService, IJWTService jwtService)
     {
         _userService = userService;
-        _kafkaService = kafkaService;
+        _jwtService = jwtService;
     }
 
     #endregion
 
-    #region POST api/user/login
+    #region POST api/user/sign-up
 
-    [HttpPost("login")]
-    public async Task<IActionResult> Login([FromBody] UserRequestDto request, CancellationToken cancellationToken)
+    [HttpPost("/sign-up")]
+    public async Task<IActionResult> SignUp([FromRoute] UserQueryDto query, CancellationToken cancellationToken)
     {
-        await _userService.RegistrateUserAsync(request, cancellationToken);
+        await _userService.RegistrateUserAsync(query, cancellationToken);
+        _jwtService.AddRefreshToken(HttpContext);
+        _jwtService.AddAccessToken(HttpContext);
+        return Ok();
+    }
+
+    #endregion
+    
+    #region GET api/user/login
+
+    [HttpGet("login")]
+    public async Task<IActionResult> Login([FromBody] UserQueryDto query, CancellationToken cancellationToken)
+    {
+        await _userService.AuthenticateAsync(query, cancellationToken);
+        _jwtService.AddRefreshToken(HttpContext);
+        _jwtService.AddAccessToken(HttpContext);
         return Ok();
     }
 
@@ -45,8 +59,6 @@ public class UserController : Controller
     [HttpDelete("delete/{id:long}")]
     public async Task<IActionResult> Delete([FromQuery] long id,CancellationToken cancellationToken)
     {
-        await _kafkaService.Producer.ProduceAsync(new UserRequestDto(), cancellationToken);
-        var response = _kafkaService.Consumer.Consume(cancellationToken);
         return Ok();
     }
 

@@ -29,7 +29,7 @@ public abstract class BaseRepositiry<TEntity, TFilter> : IRepository<TEntity, TF
     }
     
     /// <inheritdoc cref="IRepository{T}"/>
-    public async Task Create(TEntity entity, CancellationToken cancellationToken)
+    public async Task CreateAsync(TEntity entity, CancellationToken cancellationToken)
     {
         await _dbContext.Set<TEntity>().AddAsync(entity);
     }

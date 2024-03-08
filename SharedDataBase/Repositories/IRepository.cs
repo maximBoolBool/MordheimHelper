@@ -26,7 +26,7 @@ public interface IRepository<TResponse, TFilter>
     /// <param name="entity"></param>
     /// <param name="cancellationToken"></param>
     /// <returns></returns>
-    public abstract Task Create(TResponse entity, CancellationToken cancellationToken);
+    public abstract Task CreateAsync(TResponse entity, CancellationToken cancellationToken);
 
     /// <summary>
     ///     Удалить по Id

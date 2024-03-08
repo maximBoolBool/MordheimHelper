@@ -2,13 +2,14 @@
 using Microsoft.AspNetCore.Mvc;
 using RuleServices.Enums;
 using RuleServices.Models.Dto;
-using RuleServices.Models.Dto.Response;
 using RuleServices.Services;
 using SharedEntities.Models;
+using SharedEntities.Models.DTO.Response;
 
 namespace RuleService.Controllers;
 
 [Route("api/eqipment")]
+[ApiController]
 public class EqipmentController : Controller
 {
     #region Fields

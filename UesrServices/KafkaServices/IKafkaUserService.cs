@@ -5,4 +5,4 @@ using SharedEntities.Models.DTO.Response;
 
 namespace UesrServices.KafkaServices;
 
-public interface IKafkaUserService : IKafkaService<UserRequestDto, UserResponseDto> { }
+public interface IKafkaUserService : IKafkaService<UserQueryDto, UserResponseDto> { }

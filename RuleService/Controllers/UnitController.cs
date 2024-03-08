@@ -8,6 +8,7 @@ namespace RuleService.Controllers;
 /// <summary>
 ///     Контроллер для юнитов-ов
 /// </summary>
+[ApiController]
 [Route("api/units")]
 public class UnitController : Controller
 {

@@ -7,6 +7,7 @@ namespace RuleService.Controllers;
 /// <summary>
 ///     Контроллер для банд
 /// </summary>
+[ApiController]
 [Route("api/band")]
 public class BandController : Controller
 {
@@ -30,7 +31,8 @@ public class BandController : Controller
     /// <summary>
     ///     Получить лист банд
     /// </summary>
-    public async Task<IActionResult> List([FromBody]BandListQuery query,CancellationToken cancellationToken)
+    [HttpGet()] 
+    public async Task<IActionResult> List([FromQuery]BandListQuery query,CancellationToken cancellationToken)
     {
         var response = await _bandService.ListAsync(query, cancellationToken);
         return Ok(response);

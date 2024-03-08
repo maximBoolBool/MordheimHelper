@@ -71,3 +71,11 @@ C:\Users\petra\RiderProjects\MordheimHelper\UserService\bin\Debug\net7.0\Shared.
 C:\Users\petra\RiderProjects\MordheimHelper\UserService\bin\Debug\net7.0\Shared.pdb
 C:\Users\petra\RiderProjects\MordheimHelper\UserService\bin\Debug\net7.0\SharedDataBase.dll
 C:\Users\petra\RiderProjects\MordheimHelper\UserService\bin\Debug\net7.0\SharedDataBase.pdb
+C:\Users\petra\RiderProjects\MordheimHelper\UserService\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\petra\RiderProjects\MordheimHelper\UserService\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\petra\RiderProjects\MordheimHelper\UserService\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\petra\RiderProjects\MordheimHelper\UserService\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\petra\RiderProjects\MordheimHelper\UserService\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\petra\RiderProjects\MordheimHelper\UserService\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\petra\RiderProjects\MordheimHelper\UserService\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\petra\RiderProjects\MordheimHelper\UserService\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll

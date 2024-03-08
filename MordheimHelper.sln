@@ -1,7 +1,5 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MordheimHelper", "MordheimHelper\MordheimHelper.csproj", "{86415B73-1CD3-4E55-9973-D8B46FFB4A13}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{5F50CE0D-DEDE-4256-8937-F918DD2F79EE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedDataBase", "SharedDataBase\SharedDataBase.csproj", "{3DD2B700-C432-4F82-ABA3-7D6A3E50D3E5}"
@@ -11,10 +9,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuleServices", "RuleServices\RuleServices.csproj", "{908DE55C-B731-4258-B813-DD5E5708A22A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuleService", "RuleService\RuleService.csproj", "{D9C62E8C-4E20-478A-9D39-4FAF8A4D813A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationService", "AuthorizationService\AuthorizationService.csproj", "{58E334E4-784A-4385-992F-B78198FD0950}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationServices", "AuthenticationServices\AuthenticationServices.csproj", "{ABD0F138-E9F4-44F7-945D-B5A54A08E645}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UesrServices", "UesrServices\UesrServices.csproj", "{260C0407-A1FA-4434-AC70-9BCC385845FE}"
 EndProject
@@ -30,10 +24,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{86415B73-1CD3-4E55-9973-D8B46FFB4A13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{86415B73-1CD3-4E55-9973-D8B46FFB4A13}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{86415B73-1CD3-4E55-9973-D8B46FFB4A13}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{86415B73-1CD3-4E55-9973-D8B46FFB4A13}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5F50CE0D-DEDE-4256-8937-F918DD2F79EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5F50CE0D-DEDE-4256-8937-F918DD2F79EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F50CE0D-DEDE-4256-8937-F918DD2F79EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -54,14 +44,6 @@ Global
 		{D9C62E8C-4E20-478A-9D39-4FAF8A4D813A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9C62E8C-4E20-478A-9D39-4FAF8A4D813A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9C62E8C-4E20-478A-9D39-4FAF8A4D813A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{58E334E4-784A-4385-992F-B78198FD0950}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{58E334E4-784A-4385-992F-B78198FD0950}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{58E334E4-784A-4385-992F-B78198FD0950}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{58E334E4-784A-4385-992F-B78198FD0950}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ABD0F138-E9F4-44F7-945D-B5A54A08E645}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ABD0F138-E9F4-44F7-945D-B5A54A08E645}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ABD0F138-E9F4-44F7-945D-B5A54A08E645}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ABD0F138-E9F4-44F7-945D-B5A54A08E645}.Release|Any CPU.Build.0 = Release|Any CPU
 		{260C0407-A1FA-4434-AC70-9BCC385845FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{260C0407-A1FA-4434-AC70-9BCC385845FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{260C0407-A1FA-4434-AC70-9BCC385845FE}.Release|Any CPU.ActiveCfg = Release|Any CPU

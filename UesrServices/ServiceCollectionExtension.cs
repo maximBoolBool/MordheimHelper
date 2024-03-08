@@ -1,9 +1,10 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using UesrServices.Impl;
 using UesrServices.KafkaServices;
 using UesrServices.KafkaServices.Configs;
 using UesrServices.KafkaServices.Impl;
+using UesrServices.Services;
+using UesrServices.Services.Impl;
 
 namespace UesrServices;
 
