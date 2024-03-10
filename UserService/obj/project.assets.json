@@ -862,23 +862,6 @@
           "bin/placeholder/SharedDataBase.dll": {}
         }
       },
-      "UesrServices/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "AutoMapper": "12.0.1",
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
-          "KafkaServices": "1.0.0",
-          "SharedDataBase": "1.0.0",
-          "UserEntities": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/UesrServices.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/UesrServices.dll": {}
-        }
-      },
       "UserEntities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -894,6 +877,23 @@
         },
         "runtime": {
           "bin/placeholder/UserEntities.dll": {}
+        }
+      },
+      "UserServices/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "KafkaServices": "1.0.0",
+          "SharedDataBase": "1.0.0",
+          "UserEntities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UserServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UserServices.dll": {}
         }
       }
     }
@@ -2238,22 +2238,22 @@
       "path": "../SharedDataBase/SharedDataBase.csproj",
       "msbuildProject": "../SharedDataBase/SharedDataBase.csproj"
     },
-    "UesrServices/1.0.0": {
-      "type": "project",
-      "path": "../UesrServices/UesrServices.csproj",
-      "msbuildProject": "../UesrServices/UesrServices.csproj"
-    },
     "UserEntities/1.0.0": {
       "type": "project",
       "path": "../UserEntities/UserEntities.csproj",
       "msbuildProject": "../UserEntities/UserEntities.csproj"
+    },
+    "UserServices/1.0.0": {
+      "type": "project",
+      "path": "../UserServices/UserServices.csproj",
+      "msbuildProject": "../UserServices/UserServices.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 7.0.16",
-      "UesrServices >= 1.0.0",
-      "UserEntities >= 1.0.0"
+      "UserEntities >= 1.0.0",
+      "UserServices >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2283,11 +2283,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UesrServices\\UesrServices.csproj": {
-              "projectPath": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UesrServices\\UesrServices.csproj"
-            },
             "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UserEntities\\UserEntities.csproj": {
               "projectPath": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UserEntities\\UserEntities.csproj"
+            },
+            "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UserServices\\UserServices.csproj": {
+              "projectPath": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UserServices\\UserServices.csproj"
             }
           }
         }

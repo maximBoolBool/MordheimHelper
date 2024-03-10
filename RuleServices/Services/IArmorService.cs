@@ -5,7 +5,7 @@ namespace RuleServices.Services;
 
 public interface IArmorService
 {
-    Task<ArmorModel> GetAsync(long id, CancellationToken cancellationToken);
+    Task<ArmorDto> GetAsync(long id, CancellationToken cancellationToken);
 
-    Task<ArmorModel[]> ListAsync(EquepmentListQuery query, CancellationToken cancellationToken);
+    Task<ArmorDto[]> ListAsync(EquepmentListQuery query, CancellationToken cancellationToken);
 }

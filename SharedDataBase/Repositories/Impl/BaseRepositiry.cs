@@ -28,13 +28,13 @@ public abstract class BaseRepositiry<TEntity, TFilter> : IRepository<TEntity, TF
         _dbSet = dbContext.Set<TEntity>();
     }
     
-    /// <inheritdoc cref="IRepository{T}"/>
-    public async Task CreateAsync(TEntity entity, CancellationToken cancellationToken)
+    /// <inheritdoc cref="IRepository{T,TFilter}"/>
+    public async Task CreateAsync(TEntity entity, CancellationToken cancellationToken = default)
     {
-        await _dbContext.Set<TEntity>().AddAsync(entity);
+        await _dbContext.Set<TEntity>().AddAsync(entity,cancellationToken);
     }
 
-    /// <inheritdoc cref="IRepository{T}"/>
+    /// <inheritdoc cref="IRepository{T, TFilter}"/>
     public async Task Remove(long id, CancellationToken cancellationToken)
     {
         var entity = await _dbContext.Set<TEntity>().FirstOrDefaultAsync(e => e.Id == id, cancellationToken);
@@ -47,25 +47,25 @@ public abstract class BaseRepositiry<TEntity, TFilter> : IRepository<TEntity, TF
         await _dbContext.SaveChangesAsync(cancellationToken);
     }
 
-    /// <inheritdoc cref="IRepository{T}"/>
+    /// <inheritdoc cref="IRepository{T, Filter}"/>
     public async Task<TEntity?> FindById(long id, CancellationToken cancellationToken)
     {
         return await _dbContext.Set<TEntity>().FirstOrDefaultAsync(e => e.Id == id, cancellationToken);
     }
     
-    /// <inheritdoc cref="IRepository{T}"/>
+    /// <inheritdoc cref="IRepository{T, Filter}"/>
     public IQueryable<TEntity> CreateQuery()
     {
         return _dbContext.Set<TEntity>().AsQueryable();
     }
 
-    /// <inheritdoc cref="IRepository{T}"/>
+    /// <inheritdoc cref="IRepository{T, Filter}"/>
     public virtual async Task<TEntity[]> ListAsync(CancellationToken cancellationToken)
     {
         return await _dbSet.ToArrayAsync(cancellationToken);
     }
 
-    /// <inheritdoc cref="IRepository{T}"/>
+    /// <inheritdoc cref="IRepository{T, Filter}"/>
     public async Task SaveChangesAsync()
     {
         await _dbContext.SaveChangesAsync();

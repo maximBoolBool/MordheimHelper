@@ -4,4 +4,4 @@ using SharedEntities.Models.DTO.Response;
 
 namespace RuleServices.Kafka;
 
-public interface IKafkaUnitService : IKafkaService<UnitResponse, UnitRequest>{ }
+public interface IKafkaUnitService : IKafkaService<UnitDto, UnitRequest>{ }

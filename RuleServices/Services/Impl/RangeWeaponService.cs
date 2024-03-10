@@ -2,6 +2,7 @@
 using RuleEntities;
 using RuleServices.Models;
 using RuleServices.Models.Dto;
+using SharedEntities.Models.DTO.Response;
 
 namespace RuleServices.Services.Impl;
 
@@ -27,18 +28,18 @@ internal class RangeWeaponService : IRangeWeaponService
 
     #region Public methods
 
-    public async Task<RangeWeaponModel> GetAsync(long id, CancellationToken cancellationToken)
+    public async Task<RangeWeaponDto> GetAsync(long id, CancellationToken cancellationToken)
     {
         using var db = _dbWorkerFactory.CreateScopeDatabase();
         var entity = await db.RangeWeapons.FindById(id, cancellationToken);
-        return _mapper.Map<RangeWeaponModel>(entity);
+        return _mapper.Map<RangeWeaponDto>(entity);
     }
 
-    public async Task<RangeWeaponModel[]> ListAsync(EquepmentListQuery query, CancellationToken cancellationToken)
+    public async Task<RangeWeaponDto[]> ListAsync(EquepmentListQuery query, CancellationToken cancellationToken)
     {
         using var db = _dbWorkerFactory.CreateScopeDatabase();
         var entities = await db.RangeWeapons.ListAsync(cancellationToken);
-        return _mapper.Map<RangeWeaponModel[]>(entities);
+        return _mapper.Map<RangeWeaponDto[]>(entities);
     }
     
     #endregion

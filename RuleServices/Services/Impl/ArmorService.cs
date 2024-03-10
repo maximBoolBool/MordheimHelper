@@ -27,18 +27,18 @@ internal class ArmorService : IArmorService
 
     #region Public methods
 
-    public async Task<ArmorModel> GetAsync(long id, CancellationToken cancellationToken)
+    public async Task<ArmorDto> GetAsync(long id, CancellationToken cancellationToken)
     {
         using var db = _dbFactory.CreateScopeDatabase();
         var entity = await db.Armors.FindById(id, cancellationToken);
-        return _mapper.Map<ArmorModel>(entity);
+        return _mapper.Map<ArmorDto>(entity);
     }
 
-    public async Task<ArmorModel[]> ListAsync(EquepmentListQuery query, CancellationToken cancellationToken)
+    public async Task<ArmorDto[]> ListAsync(EquepmentListQuery query, CancellationToken cancellationToken)
     {
         using var db = _dbFactory.CreateScopeDatabase();
         var entities = await db.Armors.ListAsync(cancellationToken);
-        return _mapper.Map<ArmorModel[]>(entities);
+        return _mapper.Map<ArmorDto[]>(entities);
     }
     
     #endregion

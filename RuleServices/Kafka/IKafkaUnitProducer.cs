@@ -3,4 +3,4 @@ using SharedEntities.Models.DTO.Response;
 
 namespace RuleServices.Kafka;
 
-public interface IKafkaUnitProducer : IKafkaProducer<UnitResponse> { }
+public interface IKafkaUnitProducer : IKafkaProducer<UnitDto> { }

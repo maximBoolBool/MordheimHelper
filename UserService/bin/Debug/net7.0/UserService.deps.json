@@ -9,8 +9,8 @@
       "UserService/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.16",
-          "UesrServices": "1.0.0",
-          "UserEntities": "1.0.0"
+          "UserEntities": "1.0.0",
+          "UserServices": "1.0.0"
         },
         "runtime": {
           "UserService.dll": {}
@@ -491,18 +491,6 @@
           "SharedDataBase.dll": {}
         }
       },
-      "UesrServices/1.0.0": {
-        "dependencies": {
-          "AutoMapper": "12.0.1",
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
-          "KafkaServices": "1.0.0",
-          "SharedDataBase": "1.0.0",
-          "UserEntities": "1.0.0"
-        },
-        "runtime": {
-          "UesrServices.dll": {}
-        }
-      },
       "UserEntities/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.0",
@@ -513,6 +501,18 @@
         },
         "runtime": {
           "UserEntities.dll": {}
+        }
+      },
+      "UserServices/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "KafkaServices": "1.0.0",
+          "SharedDataBase": "1.0.0",
+          "UserEntities": "1.0.0"
+        },
+        "runtime": {
+          "UserServices.dll": {}
         }
       }
     }
@@ -839,12 +839,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "UesrServices/1.0.0": {
+    "UserEntities/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "UserEntities/1.0.0": {
+    "UserServices/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

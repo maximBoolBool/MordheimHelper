@@ -14,4 +14,9 @@ public interface IKafkaService<TRequest, TResponse>
     ///     Создатель сообщений
     /// </summary>
     public IKafkaProducer<TRequest> Producer { get; set; }
+
+    /// <summary>
+    ///     Получить
+    /// </summary>
+    public Task<TResponse> GetAsync(TRequest reqest, CancellationToken cancellationToken = default);
 }

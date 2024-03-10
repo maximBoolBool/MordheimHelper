@@ -1,5 +1,6 @@
 ﻿using RuleServices.Models;
 using RuleServices.Models.Dto;
+using RuleServices.Models.Dto.Response;
 
 namespace RuleServices.Services;
 

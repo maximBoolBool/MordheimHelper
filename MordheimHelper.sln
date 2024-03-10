@@ -10,7 +10,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuleServices", "RuleService
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuleService", "RuleService\RuleService.csproj", "{D9C62E8C-4E20-478A-9D39-4FAF8A4D813A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UesrServices", "UesrServices\UesrServices.csproj", "{260C0407-A1FA-4434-AC70-9BCC385845FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserServices", "UserServices\UserServices.csproj", "{260C0407-A1FA-4434-AC70-9BCC385845FE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserEntities", "UserEntities\UserEntities.csproj", "{7039A999-F9D2-484A-8A5B-DEEF57A37C50}"
 EndProject

@@ -388,6 +388,7 @@
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "KafkaServices": "1.0.0",
+          "Newtonsoft.Json": "13.0.3",
           "RuleEntities": "1.0.0"
         },
         "runtime": {

@@ -7,7 +7,7 @@ public abstract class BaseKafkaService<TRequest, TResponse> : IKafkaService<TReq
 
     /// <inheritdoc />
     public IKafkaProducer<TRequest> Producer { get; set; }
-    
+
     /// <summary>
     ///     .ctor
     /// </summary>
@@ -15,5 +15,12 @@ public abstract class BaseKafkaService<TRequest, TResponse> : IKafkaService<TReq
     {
         Consumer = consumer;
         Producer = producer;
+    }
+    
+    /// <inheritdoc cref="IKafkaService{TRequest,TResponse}"/>
+    public async Task<TResponse> GetAsync(TRequest reqest, CancellationToken cancellationToken = default)
+    {
+        await Producer.ProduceAsync(reqest, cancellationToken);
+        return await Consumer.Consume(cancellationToken);
     }
 }

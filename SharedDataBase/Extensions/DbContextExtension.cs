@@ -6,5 +6,7 @@ namespace SharedServices.Extensions;
 public static class DbContextExtension
 {
     public static void ApplyMigrates<TDatabase>(this IServiceCollection serviceCollection)
-        where TDatabase : DbContext { }
+        where TDatabase : DbContext
+    {
+    }
 }

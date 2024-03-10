@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using RuleEntities;
 using RuleServices.Models;
 using RuleServices.Models.Dto;
+using RuleServices.Models.Dto.Response;
 
 namespace RuleServices.Services.Impl;
 

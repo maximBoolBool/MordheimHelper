@@ -33,7 +33,7 @@ internal class UnitService : IUnitService
 
     #region Public Methods
     
-    public async Task<UnitResponse[]> ListAsync(UnitQuery query, CancellationToken cancellationToken)
+    public async Task<UnitDto[]> ListAsync(UnitQuery query, CancellationToken cancellationToken)
     {
         using var db = _dbWorkerFactory.CreateScopeDatabase();
 
@@ -41,10 +41,10 @@ internal class UnitService : IUnitService
         querieable = FilterHelpers.Eq(querieable, u => u.BandId, query.BandId);
         var entities = await querieable.ToArrayAsync(cancellationToken);
 
-        return _mapper.Map<UnitResponse[]>(entities);
+        return _mapper.Map<UnitDto[]>(entities);
     }
 
-    public async Task<UnitResponse> GetAsync(long id, CancellationToken cancellationToken)
+    public async Task<UnitDto> GetAsync(long id, CancellationToken cancellationToken)
     {
         using var db = _dbWorkerFactory.CreateScopeDatabase();
         var entity = await db.Units.CreateQuery()
@@ -53,7 +53,7 @@ internal class UnitService : IUnitService
             .Include(u => u.RangeWeapons)
             .FirstAsync(u => u.Id == id, cancellationToken);
         
-        return _mapper.Map<UnitResponse>(entity);
+        return _mapper.Map<UnitDto>(entity);
     }
 
     #endregion

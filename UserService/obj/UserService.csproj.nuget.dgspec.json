@@ -205,81 +205,6 @@
         }
       }
     },
-    "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UesrServices\\UesrServices.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UesrServices\\UesrServices.csproj",
-        "projectName": "UesrServices",
-        "projectPath": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UesrServices\\UesrServices.csproj",
-        "packagesPath": "C:\\Users\\petra\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UesrServices\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\petra\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net7.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
-            "projectReferences": {
-              "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\KafkaServices\\KafkaServices.csproj": {
-                "projectPath": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\KafkaServices\\KafkaServices.csproj"
-              },
-              "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\SharedDataBase\\SharedDataBase.csproj": {
-                "projectPath": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\SharedDataBase\\SharedDataBase.csproj"
-              },
-              "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UserEntities\\UserEntities.csproj": {
-                "projectPath": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UserEntities\\UserEntities.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
-          "dependencies": {
-            "AutoMapper": {
-              "target": "Package",
-              "version": "[12.0.1, )"
-            },
-            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
-              "target": "Package",
-              "version": "[12.0.1, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
     "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UserEntities\\UserEntities.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -362,6 +287,81 @@
         }
       }
     },
+    "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UserServices\\UserServices.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UserServices\\UserServices.csproj",
+        "projectName": "UserServices",
+        "projectPath": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UserServices\\UserServices.csproj",
+        "packagesPath": "C:\\Users\\petra\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UserServices\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\petra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\KafkaServices\\KafkaServices.csproj": {
+                "projectPath": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\KafkaServices\\KafkaServices.csproj"
+              },
+              "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\SharedDataBase\\SharedDataBase.csproj": {
+                "projectPath": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\SharedDataBase\\SharedDataBase.csproj"
+              },
+              "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UserEntities\\UserEntities.csproj": {
+                "projectPath": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UserEntities\\UserEntities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UserService\\UserService.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -386,11 +386,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UesrServices\\UesrServices.csproj": {
-                "projectPath": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UesrServices\\UesrServices.csproj"
-              },
               "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UserEntities\\UserEntities.csproj": {
                 "projectPath": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UserEntities\\UserEntities.csproj"
+              },
+              "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UserServices\\UserServices.csproj": {
+                "projectPath": "C:\\Users\\petra\\RiderProjects\\MordheimHelper\\UserServices\\UserServices.csproj"
               }
             }
           }
