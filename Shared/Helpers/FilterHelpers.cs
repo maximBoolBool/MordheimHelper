@@ -23,8 +23,8 @@ public static class FilterHelpers
 
     public static IQueryable<T> Sm<T, TValue>(
         IQueryable<T> query,
-        Expression<Func<T,TValue>>
-            expression, TValue? filter)
+        Expression<Func<T,TValue>> expression,
+        TValue? filter)
     {
         if (filter == null)
             return query;

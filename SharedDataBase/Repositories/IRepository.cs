@@ -9,12 +9,6 @@ public interface IRepository<TResponse, TFilter>
     public Task<TResponse[]> ListAsync(CancellationToken cancellationToken);
 
     /// <summary>
-    ///     Сохрагить изменения
-    /// </summary>
-    /// <returns></returns>
-    Task SaveChangesAsync();
-
-    /// <summary>
     ///    Создать запрос к бд 
     /// </summary>
     /// <returns></returns>
@@ -34,7 +28,7 @@ public interface IRepository<TResponse, TFilter>
     /// <param name="id"></param>
     /// <param name="cancellationToken"></param>
     /// <returns></returns>
-    public abstract Task Remove(long id, CancellationToken cancellationToken);
+    public abstract Task RemoveAsync(long id, CancellationToken cancellationToken);
 
     /// <summary>
     ///     Найти по id

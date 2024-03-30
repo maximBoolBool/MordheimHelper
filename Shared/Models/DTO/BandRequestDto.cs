@@ -3,7 +3,7 @@
 /// <summary>
 ///     Запрос для банды
 /// </summary>
-public class BandRequestDTO
+public class BandRequestDto
 {
     public long Id { get; set; }
 }

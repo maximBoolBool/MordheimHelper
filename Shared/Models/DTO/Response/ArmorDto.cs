@@ -1,8 +1,7 @@
 ﻿using Newtonsoft.Json;
-using SharedEntities.Models.DTO.Response;
 using SharedEntities.Models.DTO.Response.SpecialRuleModels;
 
-namespace RuleServices.Models;
+namespace SharedEntities.Models.DTO.Response;
 
 public class ArmorDto : IEquipmentResponse
 {

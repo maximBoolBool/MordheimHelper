@@ -1,17 +1,18 @@
-﻿namespace RuleEntities.Repositories.Impl;
+﻿using SharedServices.Repositories.Impl;
 
-internal class RuleDbWorker : IRuleDbWorker
+namespace RuleEntities.Repositories.Impl;
+
+internal class RuleDbWorker : BaseDbWorker, IRuleDbWorker
 {
-    private readonly RuleDbWorker _dbcontext;
-    
     public RuleDbWorker(
+        RuleDbContext dbContext,
         IUnitRepository units,
         IBandRepository bands,
         IArmorRepository armors,
         IRangeWeaponRepository rangeWeapons,
         ICloseCombatWeaponRepository closeCombatWeapons,
         IWeaponSpecialRuleRepository specialRules
-        )
+        ) : base(dbContext)
     {
         Armors = armors;
         Bands = bands;
@@ -35,6 +36,6 @@ internal class RuleDbWorker : IRuleDbWorker
 
     public void Dispose()
     {
-        _dbcontext.Dispose();
+        DbContext.Dispose();
     }
 }

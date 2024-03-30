@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+using SharedEntities.Helpers;
 using SharedEntities.Models.DTO;
 using SharedEntities.Models.DTO.Response;
 using UesrServices.Helpers;
@@ -16,11 +18,11 @@ public class BandManager : IBandManager
 {
     #region Fields
 
-    private IUserDbWorkerFactory _dbFactory;
+    private readonly IUserDbWorkerFactory _dbFactory;
 
-    private IKafkaBandService _kafkaService;
+    private readonly IKafkaBandService _kafkaService;
 
-    private IMapper _mapper;
+    private readonly IMapper _mapper;
 
     #endregion
 
@@ -43,7 +45,7 @@ public class BandManager : IBandManager
         CreateBandRequest request,
         CancellationToken cancellationToken = default)
     {
-        var kafkaRequest = new BandRequestDTO
+        var kafkaRequest = new BandRequestDto
         {
             Id = request.TypeId
         };
@@ -51,6 +53,7 @@ public class BandManager : IBandManager
         var newBand = _mapper.Map<BandEntity>(request);
         using var db = _dbFactory.CreateScopeDatabase();
         await db.Bands.CreateAsync(newBand, cancellationToken);
+        await db.SaveChangesAsync(cancellationToken);
         
         var kafkaResponse = await _kafkaService.GetAsync(kafkaRequest, cancellationToken);
 
@@ -65,9 +68,10 @@ public class BandManager : IBandManager
         throw new NotImplementedException();
     }
 
-    public Task DeletAsync(long userId, long bandId)
+    public async Task DeletAsync(long userId, long bandId, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        using var db = _dbFactory.CreateScopeDatabase();
+        await db.Bands.RemoveAsync(bandId, cancellationToken);
     }
 
     public Task<BandDto> GetAsync(long bandId, CancellationToken cancellationToken = default)
@@ -75,9 +79,17 @@ public class BandManager : IBandManager
         throw new NotImplementedException();
     }
 
-    public Task<BandDto[]> ListAsync(ListBandQuery query, CancellationToken cancellationToken)
+    public async Task<SlimBandResponse[]> ListAsync(ListBandQuery query, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        using var db = _dbFactory.CreateScopeDatabase();
+        var queries = db.Bands.CreateQuery();
+
+        queries = FilterHelpers.Sm(queries, e => e.MaxPointCost, query.MaxCost );
+        queries = FilterHelpers.Gr(queries, e => e.MaxPointCost, query.MinCost );
+
+        var entities = await queries.ToArrayAsync(cancellationToken);
+
+        return _mapper.Map<SlimBandResponse[]>(entities);
     }
     
     #endregion

@@ -1,6 +1,8 @@
-﻿namespace UserEntities.Repositories.Impl;
+﻿using SharedServices.Repositories.Impl;
 
-public class UserDbWorker : IUserDbWorker
+namespace UserEntities.Repositories.Impl;
+
+public class UserDbWorker : BaseDbWorker, IUserDbWorker
 {
     private readonly UserDbContext _dbContext;
     
@@ -8,7 +10,7 @@ public class UserDbWorker : IUserDbWorker
         IBandRepository bands,
         IUserRepository users, 
         IUnitRepository units,
-        UserDbContext dbContext)
+        UserDbContext dbContext) : base(dbContext)
     {
         Bands = bands;
         Users = users;

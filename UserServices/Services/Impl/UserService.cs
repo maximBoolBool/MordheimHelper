@@ -71,7 +71,7 @@ public class UserService : IUserService
             throw new ErrorException(HttpStatusCode.NotFound, "Not found");
         }
 
-        await _repository.Remove(user.Id, cancellationToken);
+        await _repository.RemoveAsync(user.Id, cancellationToken);
         
         return true;
     }

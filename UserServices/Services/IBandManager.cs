@@ -17,9 +17,9 @@ public interface IBandManager
         UpdateBandRequest request,
         CancellationToken cancellationToken = default);
 
-    public Task DeletAsync(long userId, long bandId);
+    public Task DeletAsync(long userId, long bandId, CancellationToken cancellationToken = default);
 
     public Task<BandDto> GetAsync(long bandId, CancellationToken cancellationToken = default);
 
-    public Task<BandDto[]> ListAsync(ListBandQuery query, CancellationToken cancellationToken);
+    public Task<SlimBandResponse[]> ListAsync(ListBandQuery query, CancellationToken cancellationToken);
 }

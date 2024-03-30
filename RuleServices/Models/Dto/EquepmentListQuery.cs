@@ -7,7 +7,7 @@ namespace RuleServices.Models.Dto;
 public class EquepmentListQuery : IPageQuery
 {
     [JsonProperty("types")]
-    public EqipmentType[]? Types { get; set; }
+    public EqipmentType[] Types { get; set; }
 
     [JsonProperty("skip")]
     public int Skip { get; set; } = 25;

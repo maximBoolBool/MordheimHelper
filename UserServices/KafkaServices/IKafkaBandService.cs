@@ -8,4 +8,4 @@ namespace UesrServices.KafkaServices;
 /// <summary>
 ///     Сервис для получения правил банд
 /// </summary>
-public interface IKafkaBandService : IKafkaService<BandRequestDTO, BandDto> { }
+public interface IKafkaBandService : IKafkaService<BandRequestDto, BandDto> { }

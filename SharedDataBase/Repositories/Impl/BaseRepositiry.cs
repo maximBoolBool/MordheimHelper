@@ -35,7 +35,7 @@ public abstract class BaseRepositiry<TEntity, TFilter> : IRepository<TEntity, TF
     }
 
     /// <inheritdoc cref="IRepository{T, TFilter}"/>
-    public async Task Remove(long id, CancellationToken cancellationToken)
+    public async Task RemoveAsync(long id, CancellationToken cancellationToken)
     {
         var entity = await _dbContext.Set<TEntity>().FirstOrDefaultAsync(e => e.Id == id, cancellationToken);
 
@@ -63,11 +63,5 @@ public abstract class BaseRepositiry<TEntity, TFilter> : IRepository<TEntity, TF
     public virtual async Task<TEntity[]> ListAsync(CancellationToken cancellationToken)
     {
         return await _dbSet.ToArrayAsync(cancellationToken);
-    }
-
-    /// <inheritdoc cref="IRepository{T, Filter}"/>
-    public async Task SaveChangesAsync()
-    {
-        await _dbContext.SaveChangesAsync();
     }
 }

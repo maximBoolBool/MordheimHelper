@@ -4,7 +4,7 @@ using UesrServices.KafkaServices.Configs;
 
 namespace UesrServices.KafkaServices.Impl;
 
-public class KafkaBandProducer : BaseKafkaProducer<BandRequestDTO>, IKafkaBandProducer
+public class KafkaBandProducer : BaseKafkaProducer<BandRequestDto>, IKafkaBandProducer
 {
     public KafkaBandProducer(BandKafkaProducerConfigs configs) : base(configs) { }
 }
